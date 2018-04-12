@@ -1,0 +1,833 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A7F074B1D1BAE50484FFBA1 /* Pods_Summer_ExcelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0DBE72912697F9419C254B /* Pods_Summer_ExcelUITests.framework */; };
+		57C0BFD71FDEF8EF001FD4A6 /* AddTeamatePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C0BFD61FDEF8EF001FD4A6 /* AddTeamatePopUp.swift */; };
+		57D97AF62049BF6900BCEC0D /* WeeklyStatsPUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D97AF52049BF6900BCEC0D /* WeeklyStatsPUViewController.swift */; };
+		57DB0C17204873BC002CEE90 /* TotalStatsPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB0C16204873BC002CEE90 /* TotalStatsPopUpViewController.swift */; };
+		6E8521597F0E2D3B83D2EF71 /* Pods_Summer_ExcelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C0F82995B188792ADD66EA /* Pods_Summer_ExcelTests.framework */; };
+		6F06531A1FD9AF8D009C8587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0653191FD9AF8D009C8587 /* AppDelegate.swift */; };
+		6F06531F1FD9AF8D009C8587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F06531D1FD9AF8D009C8587 /* Main.storyboard */; };
+		6F0653211FD9AF8D009C8587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F0653201FD9AF8D009C8587 /* Assets.xcassets */; };
+		6F0653241FD9AF8D009C8587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F0653221FD9AF8D009C8587 /* LaunchScreen.storyboard */; };
+		6F06532F1FD9AF8D009C8587 /* Summer_ExcelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F06532E1FD9AF8D009C8587 /* Summer_ExcelTests.swift */; };
+		6F06533A1FD9AF8D009C8587 /* Summer_ExcelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0653391FD9AF8D009C8587 /* Summer_ExcelUITests.swift */; };
+		6F0653481FD9B07A009C8587 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0653471FD9B07A009C8587 /* Athlete.swift */; };
+		6F06534A1FD9B088009C8587 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0653491FD9B088009C8587 /* Workout.swift */; };
+		6F06534E1FD9B122009C8587 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F06534D1FD9B122009C8587 /* Time.swift */; };
+		6F1989D51FEAD6A70012B088 /* PersistantAthleteArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1989D41FEAD6A70012B088 /* PersistantAthleteArray.swift */; };
+		6F2852E4202235FD00077CA4 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2852E3202235FD00077CA4 /* LoginScreen.swift */; };
+		6F521C871FDEFAA200474EE6 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F521C861FDEFAA200474EE6 /* HomepageView.swift */; };
+		6F521C891FDEFAB400474EE6 /* PersonalDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F521C881FDEFAB400474EE6 /* PersonalDataView.swift */; };
+		6F521C8B1FDEFAC200474EE6 /* TeamDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F521C8A1FDEFAC200474EE6 /* TeamDataView.swift */; };
+		6F5EAA5D2062C4F800970D5C /* SwipableTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EAA5C2062C4F800970D5C /* SwipableTabVC.swift */; };
+		6FCD3BB3200E6FC400F80E95 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCD3BB1200E6FC400F80E95 /* TableViewCell.swift */; };
+		76DBCCDF98DA54CFB27512B4 /* Pods_Summer_Excel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7520E7F17CC92379D7B11323 /* Pods_Summer_Excel.framework */; };
+		FB4C1801204489B6002696AA /* GoogleDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4C1800204489B6002696AA /* GoogleDrive.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F06532B1FD9AF8D009C8587 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F06530E1FD9AF8D009C8587 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F0653151FD9AF8D009C8587;
+			remoteInfo = "Summer-Excel";
+		};
+		6F0653361FD9AF8D009C8587 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F06530E1FD9AF8D009C8587 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F0653151FD9AF8D009C8587;
+			remoteInfo = "Summer-Excel";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08C0F82995B188792ADD66EA /* Pods_Summer_ExcelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summer_ExcelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB3A25BA81CD6B2B3269750 /* Pods-Summer-ExcelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0F33DA8B9208ABAB5598B268 /* Pods-Summer-Excel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-Excel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel.release.xcconfig"; sourceTree = "<group>"; };
+		39678FB25797E415A42568AC /* Pods-Summer-ExcelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D940D09A0910902328A7775 /* Pods-Summer-ExcelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests.debug.xcconfig"; sourceTree = "<group>"; };
+		57C0BFD61FDEF8EF001FD4A6 /* AddTeamatePopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeamatePopUp.swift; sourceTree = "<group>"; };
+		57D97AF52049BF6900BCEC0D /* WeeklyStatsPUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyStatsPUViewController.swift; sourceTree = "<group>"; };
+		57DB0C16204873BC002CEE90 /* TotalStatsPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStatsPopUpViewController.swift; sourceTree = "<group>"; };
+		6F0653161FD9AF8D009C8587 /* Summer-Excel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Summer-Excel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0653191FD9AF8D009C8587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F06531E1FD9AF8D009C8587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F0653201FD9AF8D009C8587 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F0653231FD9AF8D009C8587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6F0653251FD9AF8D009C8587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F06532A1FD9AF8D009C8587 /* Summer-ExcelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Summer-ExcelTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F06532E1FD9AF8D009C8587 /* Summer_ExcelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summer_ExcelTests.swift; sourceTree = "<group>"; };
+		6F0653301FD9AF8D009C8587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F0653351FD9AF8D009C8587 /* Summer-ExcelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Summer-ExcelUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0653391FD9AF8D009C8587 /* Summer_ExcelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summer_ExcelUITests.swift; sourceTree = "<group>"; };
+		6F06533B1FD9AF8D009C8587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F0653471FD9B07A009C8587 /* Athlete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Athlete.swift; path = ../Athlete.swift; sourceTree = "<group>"; };
+		6F0653491FD9B088009C8587 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = ../Workout.swift; sourceTree = "<group>"; };
+		6F06534D1FD9B122009C8587 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		6F1989D41FEAD6A70012B088 /* PersistantAthleteArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistantAthleteArray.swift; sourceTree = "<group>"; };
+		6F2852E3202235FD00077CA4 /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		6F521C861FDEFAA200474EE6 /* HomepageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
+		6F521C881FDEFAB400474EE6 /* PersonalDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDataView.swift; sourceTree = "<group>"; };
+		6F521C8A1FDEFAC200474EE6 /* TeamDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDataView.swift; sourceTree = "<group>"; };
+		6F5EAA5C2062C4F800970D5C /* SwipableTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableTabVC.swift; sourceTree = "<group>"; };
+		6FCD3BB1200E6FC400F80E95 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		7520E7F17CC92379D7B11323 /* Pods_Summer_Excel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summer_Excel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		771CF06C031430EC77A6BE22 /* Pods-Summer-Excel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-Excel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel.debug.xcconfig"; sourceTree = "<group>"; };
+		BA0DBE72912697F9419C254B /* Pods_Summer_ExcelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summer_ExcelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E88BAD9CEE6BC347E3629141 /* Pods-Summer-ExcelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB4C1800204489B6002696AA /* GoogleDrive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDrive.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F0653131FD9AF8D009C8587 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76DBCCDF98DA54CFB27512B4 /* Pods_Summer_Excel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F0653271FD9AF8D009C8587 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E8521597F0E2D3B83D2EF71 /* Pods_Summer_ExcelTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F0653321FD9AF8D009C8587 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A7F074B1D1BAE50484FFBA1 /* Pods_Summer_ExcelUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F06530D1FD9AF8D009C8587 = {
+			isa = PBXGroup;
+			children = (
+				6F0653181FD9AF8D009C8587 /* Summer-Excel */,
+				6F06532D1FD9AF8D009C8587 /* Summer-ExcelTests */,
+				6F0653381FD9AF8D009C8587 /* Summer-ExcelUITests */,
+				6F0653171FD9AF8D009C8587 /* Products */,
+				9E831A84E53328C037E49341 /* Pods */,
+				9ED38B4436BD31DAD475113C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6F0653171FD9AF8D009C8587 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F0653161FD9AF8D009C8587 /* Summer-Excel.app */,
+				6F06532A1FD9AF8D009C8587 /* Summer-ExcelTests.xctest */,
+				6F0653351FD9AF8D009C8587 /* Summer-ExcelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F0653181FD9AF8D009C8587 /* Summer-Excel */ = {
+			isa = PBXGroup;
+			children = (
+				6F521C8C1FDF029500474EE6 /* View Controller Files */,
+				FB526BC91FDEF6EB00C32B3D /* Functionality Classes */,
+				6F0653191FD9AF8D009C8587 /* AppDelegate.swift */,
+				6F06531D1FD9AF8D009C8587 /* Main.storyboard */,
+				6F0653221FD9AF8D009C8587 /* LaunchScreen.storyboard */,
+				6F0653201FD9AF8D009C8587 /* Assets.xcassets */,
+				6F0653251FD9AF8D009C8587 /* Info.plist */,
+			);
+			path = "Summer-Excel";
+			sourceTree = "<group>";
+		};
+		6F06532D1FD9AF8D009C8587 /* Summer-ExcelTests */ = {
+			isa = PBXGroup;
+			children = (
+				6F06532E1FD9AF8D009C8587 /* Summer_ExcelTests.swift */,
+				6F0653301FD9AF8D009C8587 /* Info.plist */,
+			);
+			path = "Summer-ExcelTests";
+			sourceTree = "<group>";
+		};
+		6F0653381FD9AF8D009C8587 /* Summer-ExcelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6F0653391FD9AF8D009C8587 /* Summer_ExcelUITests.swift */,
+				6F06533B1FD9AF8D009C8587 /* Info.plist */,
+			);
+			path = "Summer-ExcelUITests";
+			sourceTree = "<group>";
+		};
+		6F521C8C1FDF029500474EE6 /* View Controller Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F2852E3202235FD00077CA4 /* LoginScreen.swift */,
+				6F521C8A1FDEFAC200474EE6 /* TeamDataView.swift */,
+				6F521C881FDEFAB400474EE6 /* PersonalDataView.swift */,
+				57DB0C16204873BC002CEE90 /* TotalStatsPopUpViewController.swift */,
+				57D97AF52049BF6900BCEC0D /* WeeklyStatsPUViewController.swift */,
+				6F521C861FDEFAA200474EE6 /* HomepageView.swift */,
+				57C0BFD61FDEF8EF001FD4A6 /* AddTeamatePopUp.swift */,
+				6FCD3BB1200E6FC400F80E95 /* TableViewCell.swift */,
+			);
+			name = "View Controller Files";
+			sourceTree = "<group>";
+		};
+		9E831A84E53328C037E49341 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				771CF06C031430EC77A6BE22 /* Pods-Summer-Excel.debug.xcconfig */,
+				0F33DA8B9208ABAB5598B268 /* Pods-Summer-Excel.release.xcconfig */,
+				4D940D09A0910902328A7775 /* Pods-Summer-ExcelTests.debug.xcconfig */,
+				E88BAD9CEE6BC347E3629141 /* Pods-Summer-ExcelTests.release.xcconfig */,
+				39678FB25797E415A42568AC /* Pods-Summer-ExcelUITests.debug.xcconfig */,
+				0EB3A25BA81CD6B2B3269750 /* Pods-Summer-ExcelUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9ED38B4436BD31DAD475113C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7520E7F17CC92379D7B11323 /* Pods_Summer_Excel.framework */,
+				08C0F82995B188792ADD66EA /* Pods_Summer_ExcelTests.framework */,
+				BA0DBE72912697F9419C254B /* Pods_Summer_ExcelUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB526BC91FDEF6EB00C32B3D /* Functionality Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6F0653491FD9B088009C8587 /* Workout.swift */,
+				6F0653471FD9B07A009C8587 /* Athlete.swift */,
+				6F06534D1FD9B122009C8587 /* Time.swift */,
+				6F1989D41FEAD6A70012B088 /* PersistantAthleteArray.swift */,
+				FB4C1800204489B6002696AA /* GoogleDrive.swift */,
+				6F5EAA5C2062C4F800970D5C /* SwipableTabVC.swift */,
+			);
+			name = "Functionality Classes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F0653151FD9AF8D009C8587 /* Summer-Excel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F06533E1FD9AF8D009C8587 /* Build configuration list for PBXNativeTarget "Summer-Excel" */;
+			buildPhases = (
+				D45560089B55A6BC6DE87BA5 /* [CP] Check Pods Manifest.lock */,
+				6F0653121FD9AF8D009C8587 /* Sources */,
+				6F0653131FD9AF8D009C8587 /* Frameworks */,
+				6F0653141FD9AF8D009C8587 /* Resources */,
+				076BE2D044BEFC2A82E84F65 /* [CP] Embed Pods Frameworks */,
+				F2426413674A88D2AF320E4B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Summer-Excel";
+			productName = "Summer-Excel";
+			productReference = 6F0653161FD9AF8D009C8587 /* Summer-Excel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6F0653291FD9AF8D009C8587 /* Summer-ExcelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F0653411FD9AF8D009C8587 /* Build configuration list for PBXNativeTarget "Summer-ExcelTests" */;
+			buildPhases = (
+				CF7D00B62D659ADBD6E54A64 /* [CP] Check Pods Manifest.lock */,
+				6F0653261FD9AF8D009C8587 /* Sources */,
+				6F0653271FD9AF8D009C8587 /* Frameworks */,
+				6F0653281FD9AF8D009C8587 /* Resources */,
+				DE70716243FE56A94F4CA91E /* [CP] Embed Pods Frameworks */,
+				70F47F478690541BA341221E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F06532C1FD9AF8D009C8587 /* PBXTargetDependency */,
+			);
+			name = "Summer-ExcelTests";
+			productName = "Summer-ExcelTests";
+			productReference = 6F06532A1FD9AF8D009C8587 /* Summer-ExcelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6F0653341FD9AF8D009C8587 /* Summer-ExcelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F0653441FD9AF8D009C8587 /* Build configuration list for PBXNativeTarget "Summer-ExcelUITests" */;
+			buildPhases = (
+				D50A133CB4230DFC0A7587C8 /* [CP] Check Pods Manifest.lock */,
+				6F0653311FD9AF8D009C8587 /* Sources */,
+				6F0653321FD9AF8D009C8587 /* Frameworks */,
+				6F0653331FD9AF8D009C8587 /* Resources */,
+				3D437AFE56E89B6F74873F96 /* [CP] Embed Pods Frameworks */,
+				C4D8A4935336F6C0D654EC50 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F0653371FD9AF8D009C8587 /* PBXTargetDependency */,
+			);
+			name = "Summer-ExcelUITests";
+			productName = "Summer-ExcelUITests";
+			productReference = 6F0653351FD9AF8D009C8587 /* Summer-ExcelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F06530E1FD9AF8D009C8587 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "DIstrict 196";
+				TargetAttributes = {
+					6F0653151FD9AF8D009C8587 = {
+						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					6F0653291FD9AF8D009C8587 = {
+						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6F0653151FD9AF8D009C8587;
+					};
+					6F0653341FD9AF8D009C8587 = {
+						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6F0653151FD9AF8D009C8587;
+					};
+				};
+			};
+			buildConfigurationList = 6F0653111FD9AF8D009C8587 /* Build configuration list for PBXProject "Summer-Excel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F06530D1FD9AF8D009C8587;
+			productRefGroup = 6F0653171FD9AF8D009C8587 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F0653151FD9AF8D009C8587 /* Summer-Excel */,
+				6F0653291FD9AF8D009C8587 /* Summer-ExcelTests */,
+				6F0653341FD9AF8D009C8587 /* Summer-ExcelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F0653141FD9AF8D009C8587 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F0653241FD9AF8D009C8587 /* LaunchScreen.storyboard in Resources */,
+				6F0653211FD9AF8D009C8587 /* Assets.xcassets in Resources */,
+				6F06531F1FD9AF8D009C8587 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F0653281FD9AF8D009C8587 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F0653331FD9AF8D009C8587 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		076BE2D044BEFC2A82E84F65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D437AFE56E89B6F74873F96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70F47F478690541BA341221E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4D8A4935336F6C0D654EC50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF7D00B62D659ADBD6E54A64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Summer-ExcelTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D45560089B55A6BC6DE87BA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Summer-Excel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D50A133CB4230DFC0A7587C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Summer-ExcelUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE70716243FE56A94F4CA91E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2426413674A88D2AF320E4B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F0653121FD9AF8D009C8587 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F521C891FDEFAB400474EE6 /* PersonalDataView.swift in Sources */,
+				6F521C8B1FDEFAC200474EE6 /* TeamDataView.swift in Sources */,
+				6F521C871FDEFAA200474EE6 /* HomepageView.swift in Sources */,
+				FB4C1801204489B6002696AA /* GoogleDrive.swift in Sources */,
+				6F0653481FD9B07A009C8587 /* Athlete.swift in Sources */,
+				57C0BFD71FDEF8EF001FD4A6 /* AddTeamatePopUp.swift in Sources */,
+				6FCD3BB3200E6FC400F80E95 /* TableViewCell.swift in Sources */,
+				6F1989D51FEAD6A70012B088 /* PersistantAthleteArray.swift in Sources */,
+				6F5EAA5D2062C4F800970D5C /* SwipableTabVC.swift in Sources */,
+				6F06534E1FD9B122009C8587 /* Time.swift in Sources */,
+				6F06531A1FD9AF8D009C8587 /* AppDelegate.swift in Sources */,
+				57D97AF62049BF6900BCEC0D /* WeeklyStatsPUViewController.swift in Sources */,
+				57DB0C17204873BC002CEE90 /* TotalStatsPopUpViewController.swift in Sources */,
+				6F2852E4202235FD00077CA4 /* LoginScreen.swift in Sources */,
+				6F06534A1FD9B088009C8587 /* Workout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F0653261FD9AF8D009C8587 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F06532F1FD9AF8D009C8587 /* Summer_ExcelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F0653311FD9AF8D009C8587 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F06533A1FD9AF8D009C8587 /* Summer_ExcelUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F06532C1FD9AF8D009C8587 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F0653151FD9AF8D009C8587 /* Summer-Excel */;
+			targetProxy = 6F06532B1FD9AF8D009C8587 /* PBXContainerItemProxy */;
+		};
+		6F0653371FD9AF8D009C8587 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F0653151FD9AF8D009C8587 /* Summer-Excel */;
+			targetProxy = 6F0653361FD9AF8D009C8587 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6F06531D1FD9AF8D009C8587 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F06531E1FD9AF8D009C8587 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6F0653221FD9AF8D009C8587 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F0653231FD9AF8D009C8587 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F06533C1FD9AF8D009C8587 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F06533D1FD9AF8D009C8587 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F06533F1FD9AF8D009C8587 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 771CF06C031430EC77A6BE22 /* Pods-Summer-Excel.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Summer-Excel/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.Identifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6F0653401FD9AF8D009C8587 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F33DA8B9208ABAB5598B268 /* Pods-Summer-Excel.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Summer-Excel/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.Identifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6F0653421FD9AF8D009C8587 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D940D09A0910902328A7775 /* Pods-Summer-ExcelTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Summer-ExcelTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.district196.Summer-ExcelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Summer-Excel.app/Summer-Excel";
+			};
+			name = Debug;
+		};
+		6F0653431FD9AF8D009C8587 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E88BAD9CEE6BC347E3629141 /* Pods-Summer-ExcelTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Summer-ExcelTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.district196.Summer-ExcelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Summer-Excel.app/Summer-Excel";
+			};
+			name = Release;
+		};
+		6F0653451FD9AF8D009C8587 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39678FB25797E415A42568AC /* Pods-Summer-ExcelUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Summer-ExcelUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.district196.Summer-ExcelUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Summer-Excel";
+			};
+			name = Debug;
+		};
+		6F0653461FD9AF8D009C8587 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB3A25BA81CD6B2B3269750 /* Pods-Summer-ExcelUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Summer-ExcelUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.district196.Summer-ExcelUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Summer-Excel";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F0653111FD9AF8D009C8587 /* Build configuration list for PBXProject "Summer-Excel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F06533C1FD9AF8D009C8587 /* Debug */,
+				6F06533D1FD9AF8D009C8587 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F06533E1FD9AF8D009C8587 /* Build configuration list for PBXNativeTarget "Summer-Excel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F06533F1FD9AF8D009C8587 /* Debug */,
+				6F0653401FD9AF8D009C8587 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F0653411FD9AF8D009C8587 /* Build configuration list for PBXNativeTarget "Summer-ExcelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F0653421FD9AF8D009C8587 /* Debug */,
+				6F0653431FD9AF8D009C8587 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F0653441FD9AF8D009C8587 /* Build configuration list for PBXNativeTarget "Summer-ExcelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F0653451FD9AF8D009C8587 /* Debug */,
+				6F0653461FD9AF8D009C8587 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F06530E1FD9AF8D009C8587 /* Project object */;
+}
