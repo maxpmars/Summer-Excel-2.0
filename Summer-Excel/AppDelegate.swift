@@ -15,6 +15,7 @@ var theAthlete: Athlete? = nil
 //Array that saves the data between app closures
 var pArray: PersistentStringArray?
 
+//hello
 import UIKit
 import Firebase
 
