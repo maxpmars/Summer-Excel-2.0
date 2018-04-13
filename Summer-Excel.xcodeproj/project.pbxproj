@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A7F074B1D1BAE50484FFBA1 /* Pods_Summer_ExcelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0DBE72912697F9419C254B /* Pods_Summer_ExcelUITests.framework */; };
+		326D95176F8A5252CE95C6C4 /* Pods_Summer_ExcelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F4A2C606A4E9F04235996E /* Pods_Summer_ExcelUITests.framework */; };
 		57C0BFD71FDEF8EF001FD4A6 /* AddTeamatePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C0BFD61FDEF8EF001FD4A6 /* AddTeamatePopUp.swift */; };
 		57D97AF62049BF6900BCEC0D /* WeeklyStatsPUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D97AF52049BF6900BCEC0D /* WeeklyStatsPUViewController.swift */; };
 		57DB0C17204873BC002CEE90 /* TotalStatsPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB0C16204873BC002CEE90 /* TotalStatsPopUpViewController.swift */; };
-		6E8521597F0E2D3B83D2EF71 /* Pods_Summer_ExcelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C0F82995B188792ADD66EA /* Pods_Summer_ExcelTests.framework */; };
+		694A97A89A4A7C5EF3B7A9AB /* Pods_Summer_Excel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD673E522E1592417462886 /* Pods_Summer_Excel.framework */; };
 		6F06531A1FD9AF8D009C8587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0653191FD9AF8D009C8587 /* AppDelegate.swift */; };
 		6F06531F1FD9AF8D009C8587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F06531D1FD9AF8D009C8587 /* Main.storyboard */; };
 		6F0653211FD9AF8D009C8587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F0653201FD9AF8D009C8587 /* Assets.xcassets */; };
@@ -28,7 +28,7 @@
 		6F521C8B1FDEFAC200474EE6 /* TeamDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F521C8A1FDEFAC200474EE6 /* TeamDataView.swift */; };
 		6F5EAA5D2062C4F800970D5C /* SwipableTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5EAA5C2062C4F800970D5C /* SwipableTabVC.swift */; };
 		6FCD3BB3200E6FC400F80E95 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCD3BB1200E6FC400F80E95 /* TableViewCell.swift */; };
-		76DBCCDF98DA54CFB27512B4 /* Pods_Summer_Excel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7520E7F17CC92379D7B11323 /* Pods_Summer_Excel.framework */; };
+		83639DD32E3729DDD7457C12 /* Pods_Summer_ExcelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE72519687062758349ECEE2 /* Pods_Summer_ExcelTests.framework */; };
 		FB4C1801204489B6002696AA /* GoogleDrive.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4C1800204489B6002696AA /* GoogleDrive.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,11 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08C0F82995B188792ADD66EA /* Pods_Summer_ExcelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summer_ExcelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EB3A25BA81CD6B2B3269750 /* Pods-Summer-ExcelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests.release.xcconfig"; sourceTree = "<group>"; };
-		0F33DA8B9208ABAB5598B268 /* Pods-Summer-Excel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-Excel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel.release.xcconfig"; sourceTree = "<group>"; };
-		39678FB25797E415A42568AC /* Pods-Summer-ExcelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4D940D09A0910902328A7775 /* Pods-Summer-ExcelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests.debug.xcconfig"; sourceTree = "<group>"; };
+		01F64A4ADB30DEF00D18678F /* Pods-Summer-Excel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-Excel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel.debug.xcconfig"; sourceTree = "<group>"; };
+		1F17BD65F60F0AE2616ECBAD /* Pods-Summer-ExcelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2AD673E522E1592417462886 /* Pods_Summer_Excel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summer_Excel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F01A6A944ECD2AACD1F3FF8 /* Pods-Summer-ExcelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		57C0BFD61FDEF8EF001FD4A6 /* AddTeamatePopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeamatePopUp.swift; sourceTree = "<group>"; };
 		57D97AF52049BF6900BCEC0D /* WeeklyStatsPUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyStatsPUViewController.swift; sourceTree = "<group>"; };
 		57DB0C16204873BC002CEE90 /* TotalStatsPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStatsPopUpViewController.swift; sourceTree = "<group>"; };
@@ -80,10 +79,11 @@
 		6F521C8A1FDEFAC200474EE6 /* TeamDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDataView.swift; sourceTree = "<group>"; };
 		6F5EAA5C2062C4F800970D5C /* SwipableTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableTabVC.swift; sourceTree = "<group>"; };
 		6FCD3BB1200E6FC400F80E95 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		7520E7F17CC92379D7B11323 /* Pods_Summer_Excel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summer_Excel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		771CF06C031430EC77A6BE22 /* Pods-Summer-Excel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-Excel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel.debug.xcconfig"; sourceTree = "<group>"; };
-		BA0DBE72912697F9419C254B /* Pods_Summer_ExcelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summer_ExcelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E88BAD9CEE6BC347E3629141 /* Pods-Summer-ExcelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6F4A2C606A4E9F04235996E /* Pods_Summer_ExcelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summer_ExcelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE72519687062758349ECEE2 /* Pods_Summer_ExcelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Summer_ExcelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D22BD780A937084A7A038A5E /* Pods-Summer-ExcelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests.release.xcconfig"; sourceTree = "<group>"; };
+		DA0DB0C3BC0D57F9DED8124F /* Pods-Summer-Excel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-Excel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel.release.xcconfig"; sourceTree = "<group>"; };
+		E788BE33A9AFF2345C3A2BAA /* Pods-Summer-ExcelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB4C1800204489B6002696AA /* GoogleDrive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDrive.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76DBCCDF98DA54CFB27512B4 /* Pods_Summer_Excel.framework in Frameworks */,
+				694A97A89A4A7C5EF3B7A9AB /* Pods_Summer_Excel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E8521597F0E2D3B83D2EF71 /* Pods_Summer_ExcelTests.framework in Frameworks */,
+				83639DD32E3729DDD7457C12 /* Pods_Summer_ExcelTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,13 +108,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A7F074B1D1BAE50484FFBA1 /* Pods_Summer_ExcelUITests.framework in Frameworks */,
+				326D95176F8A5252CE95C6C4 /* Pods_Summer_ExcelUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B4DE2D6887CC5EF7CF5029E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01F64A4ADB30DEF00D18678F /* Pods-Summer-Excel.debug.xcconfig */,
+				DA0DB0C3BC0D57F9DED8124F /* Pods-Summer-Excel.release.xcconfig */,
+				4F01A6A944ECD2AACD1F3FF8 /* Pods-Summer-ExcelTests.debug.xcconfig */,
+				D22BD780A937084A7A038A5E /* Pods-Summer-ExcelTests.release.xcconfig */,
+				E788BE33A9AFF2345C3A2BAA /* Pods-Summer-ExcelUITests.debug.xcconfig */,
+				1F17BD65F60F0AE2616ECBAD /* Pods-Summer-ExcelUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6F06530D1FD9AF8D009C8587 = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +135,8 @@
 				6F06532D1FD9AF8D009C8587 /* Summer-ExcelTests */,
 				6F0653381FD9AF8D009C8587 /* Summer-ExcelUITests */,
 				6F0653171FD9AF8D009C8587 /* Products */,
-				9E831A84E53328C037E49341 /* Pods */,
-				9ED38B4436BD31DAD475113C /* Frameworks */,
+				0B4DE2D6887CC5EF7CF5029E /* Pods */,
+				760C2BC9CF6968D0288585D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,25 +197,12 @@
 			name = "View Controller Files";
 			sourceTree = "<group>";
 		};
-		9E831A84E53328C037E49341 /* Pods */ = {
+		760C2BC9CF6968D0288585D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				771CF06C031430EC77A6BE22 /* Pods-Summer-Excel.debug.xcconfig */,
-				0F33DA8B9208ABAB5598B268 /* Pods-Summer-Excel.release.xcconfig */,
-				4D940D09A0910902328A7775 /* Pods-Summer-ExcelTests.debug.xcconfig */,
-				E88BAD9CEE6BC347E3629141 /* Pods-Summer-ExcelTests.release.xcconfig */,
-				39678FB25797E415A42568AC /* Pods-Summer-ExcelUITests.debug.xcconfig */,
-				0EB3A25BA81CD6B2B3269750 /* Pods-Summer-ExcelUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		9ED38B4436BD31DAD475113C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7520E7F17CC92379D7B11323 /* Pods_Summer_Excel.framework */,
-				08C0F82995B188792ADD66EA /* Pods_Summer_ExcelTests.framework */,
-				BA0DBE72912697F9419C254B /* Pods_Summer_ExcelUITests.framework */,
+				2AD673E522E1592417462886 /* Pods_Summer_Excel.framework */,
+				BE72519687062758349ECEE2 /* Pods_Summer_ExcelTests.framework */,
+				A6F4A2C606A4E9F04235996E /* Pods_Summer_ExcelUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,12 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F06533E1FD9AF8D009C8587 /* Build configuration list for PBXNativeTarget "Summer-Excel" */;
 			buildPhases = (
-				D45560089B55A6BC6DE87BA5 /* [CP] Check Pods Manifest.lock */,
+				A59436118AE60D18E4BF6328 /* [CP] Check Pods Manifest.lock */,
 				6F0653121FD9AF8D009C8587 /* Sources */,
 				6F0653131FD9AF8D009C8587 /* Frameworks */,
 				6F0653141FD9AF8D009C8587 /* Resources */,
-				076BE2D044BEFC2A82E84F65 /* [CP] Embed Pods Frameworks */,
-				F2426413674A88D2AF320E4B /* [CP] Copy Pods Resources */,
+				13A99A0D8CD9F66FA72C2C6E /* [CP] Embed Pods Frameworks */,
+				F87B4A75C68D76E4990AB9B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,12 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F0653411FD9AF8D009C8587 /* Build configuration list for PBXNativeTarget "Summer-ExcelTests" */;
 			buildPhases = (
-				CF7D00B62D659ADBD6E54A64 /* [CP] Check Pods Manifest.lock */,
+				E471514C7C56DDD3B3001749 /* [CP] Check Pods Manifest.lock */,
 				6F0653261FD9AF8D009C8587 /* Sources */,
 				6F0653271FD9AF8D009C8587 /* Frameworks */,
 				6F0653281FD9AF8D009C8587 /* Resources */,
-				DE70716243FE56A94F4CA91E /* [CP] Embed Pods Frameworks */,
-				70F47F478690541BA341221E /* [CP] Copy Pods Resources */,
+				15F9C3B0D05B9BF319FD0742 /* [CP] Embed Pods Frameworks */,
+				29114277356B54762FF2C53E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,12 +268,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F0653441FD9AF8D009C8587 /* Build configuration list for PBXNativeTarget "Summer-ExcelUITests" */;
 			buildPhases = (
-				D50A133CB4230DFC0A7587C8 /* [CP] Check Pods Manifest.lock */,
+				61A06897324E0FF37FCA2302 /* [CP] Check Pods Manifest.lock */,
 				6F0653311FD9AF8D009C8587 /* Sources */,
 				6F0653321FD9AF8D009C8587 /* Frameworks */,
 				6F0653331FD9AF8D009C8587 /* Resources */,
-				3D437AFE56E89B6F74873F96 /* [CP] Embed Pods Frameworks */,
-				C4D8A4935336F6C0D654EC50 /* [CP] Copy Pods Resources */,
+				7D0D481EA791C43B6965CD89 /* [CP] Embed Pods Frameworks */,
+				87CC2EE56EBFC894F9C991D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,7 +362,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		076BE2D044BEFC2A82E84F65 /* [CP] Embed Pods Frameworks */ = {
+		13A99A0D8CD9F66FA72C2C6E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -386,7 +386,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3D437AFE56E89B6F74873F96 /* [CP] Embed Pods Frameworks */ = {
+		15F9C3B0D05B9BF319FD0742 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,10 +398,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		70F47F478690541BA341221E /* [CP] Copy Pods Resources */ = {
+		29114277356B54762FF2C53E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -416,58 +416,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C4D8A4935336F6C0D654EC50 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF7D00B62D659ADBD6E54A64 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Summer-ExcelTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D45560089B55A6BC6DE87BA5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Summer-Excel-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D50A133CB4230DFC0A7587C8 /* [CP] Check Pods Manifest.lock */ = {
+		61A06897324E0FF37FCA2302 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -485,7 +434,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DE70716243FE56A94F4CA91E /* [CP] Embed Pods Frameworks */ = {
+		7D0D481EA791C43B6965CD89 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -497,10 +446,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F2426413674A88D2AF320E4B /* [CP] Copy Pods Resources */ = {
+		87CC2EE56EBFC894F9C991D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A59436118AE60D18E4BF6328 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Summer-Excel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E471514C7C56DDD3B3001749 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Summer-ExcelTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F87B4A75C68D76E4990AB9B3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -702,7 +702,7 @@
 		};
 		6F06533F1FD9AF8D009C8587 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 771CF06C031430EC77A6BE22 /* Pods-Summer-Excel.debug.xcconfig */;
+			baseConfigurationReference = 01F64A4ADB30DEF00D18678F /* Pods-Summer-Excel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -717,7 +717,7 @@
 		};
 		6F0653401FD9AF8D009C8587 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F33DA8B9208ABAB5598B268 /* Pods-Summer-Excel.release.xcconfig */;
+			baseConfigurationReference = DA0DB0C3BC0D57F9DED8124F /* Pods-Summer-Excel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -732,7 +732,7 @@
 		};
 		6F0653421FD9AF8D009C8587 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D940D09A0910902328A7775 /* Pods-Summer-ExcelTests.debug.xcconfig */;
+			baseConfigurationReference = 4F01A6A944ECD2AACD1F3FF8 /* Pods-Summer-ExcelTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -747,7 +747,7 @@
 		};
 		6F0653431FD9AF8D009C8587 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E88BAD9CEE6BC347E3629141 /* Pods-Summer-ExcelTests.release.xcconfig */;
+			baseConfigurationReference = D22BD780A937084A7A038A5E /* Pods-Summer-ExcelTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -762,7 +762,7 @@
 		};
 		6F0653451FD9AF8D009C8587 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39678FB25797E415A42568AC /* Pods-Summer-ExcelUITests.debug.xcconfig */;
+			baseConfigurationReference = E788BE33A9AFF2345C3A2BAA /* Pods-Summer-ExcelUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Summer-ExcelUITests/Info.plist";
@@ -776,7 +776,7 @@
 		};
 		6F0653461FD9AF8D009C8587 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EB3A25BA81CD6B2B3269750 /* Pods-Summer-ExcelUITests.release.xcconfig */;
+			baseConfigurationReference = 1F17BD65F60F0AE2616ECBAD /* Pods-Summer-ExcelUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Summer-ExcelUITests/Info.plist";

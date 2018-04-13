@@ -16,6 +16,7 @@ var theAthlete: Athlete? = nil
 var pArray: PersistentStringArray?
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
         
+    }
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        // Use Firebase library to configure APIs
+        FirebaseApp.configure()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
