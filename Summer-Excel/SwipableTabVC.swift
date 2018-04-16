@@ -31,4 +31,9 @@ class SwipableTabVC : UIViewController {
     @objc func swipeRight() {
         tabBarController!.selectedIndex = max(0, tabBarController!.selectedIndex - 1)
     }
+    
+    //Hide Keyboard when user touches outside
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

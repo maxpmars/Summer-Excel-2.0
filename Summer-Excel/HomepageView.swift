@@ -110,4 +110,15 @@ class HomepageView: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource 
 
     }
     
+
+    
+    //Presses return key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        mileInput.resignFirstResponder()
+        secondInput.resignFirstResponder()
+        notesInput.resignFirstResponder()
+        dateInput.resignFirstResponder()
+        return true
+    }
+
     }

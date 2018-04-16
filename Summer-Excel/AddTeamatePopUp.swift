@@ -23,10 +23,7 @@ class AddTeamatePopUp: LoginScreen, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    //Hide Keyboard when user touches outside
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+    
     
     //Presses return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
