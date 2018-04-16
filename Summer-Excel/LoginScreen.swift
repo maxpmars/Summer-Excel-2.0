@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class LoginScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class LoginScreen: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource {
     
     
     
