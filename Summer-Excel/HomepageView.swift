@@ -43,6 +43,9 @@ class HomepageView: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     
+    @IBAction func secondsEdited(_ sender: Any) {
+        enabled()
+    }
     
     @IBAction func milesEdited(_ sender: Any) {
         enabled()
@@ -92,7 +95,7 @@ class HomepageView: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource 
     
     
     func enabled() {
-        if (mileInput.hasText && minuteInput.hasText) {
+        if (mileInput.hasText && minuteInput.hasText && secondInput.hasText) {
             enterButton.isEnabled = true
         } else {
             enterButton.isEnabled = false

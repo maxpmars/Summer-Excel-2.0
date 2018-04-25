@@ -42,7 +42,7 @@ class Workout: NSObject, NSCoding {
         }
         else
         {
-            avgMilePace = Time(min: 0)
+            avgMilePace = Time(sec: 0, min: 0)
         }
         notes = words
         milesRan = miles

@@ -14,21 +14,11 @@ class Time: NSObject, NSCoding {
     //Integer that represents the minutes of the time the time object is representing
     var minutes: Int
     
-    
-
-    
-
-    init(min: Int)
-    {
-        minutes = min
-        seconds = 0
-    }
-    
 
     
     init(sec: Int, min: Int)
     {
-        seconds = 0
+        seconds = sec
         minutes = min
         
     }
@@ -81,12 +71,27 @@ class Time: NSObject, NSCoding {
     func divideTime(number: Double) -> Time
     {
         let num = Int(number)
-        let secondsTotal = (minutes * 60) + seconds
-        let averageTotalSeconds = secondsTotal/num
-        let averagePaceMinutes = averageTotalSeconds/60
-        let averagePaceSeconds = secondsTotal % num
-        let result = Time(sec: averagePaceSeconds, min: averagePaceMinutes)
+        var minu = minutes
+        var secs = seconds
+        let totalSeconds = (minu * 60) + secs
+        let averageSeconds = totalSeconds/num
+        minu = averageSeconds / 60
+        secs = averageSeconds % 60
+        let result = Time(sec: Int(secs), min: Int(minu))
         return result
+    }
+    
+    func add(number: Time) -> Time
+    {
+        var totalSeconds = seconds + number.seconds
+        var totalMinutes = minutes + number.minutes
+        if totalSeconds > 60
+        {
+            totalMinutes = totalMinutes + 1
+            totalSeconds = totalSeconds - 60
+        }
+        let time = Time(sec: totalSeconds, min: totalMinutes)
+        return time
     }
     
 
