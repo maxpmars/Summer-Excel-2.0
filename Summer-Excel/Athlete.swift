@@ -15,9 +15,10 @@ class Athlete: NSObject, NSCoding  {
     var thisGrade: Int = 0
     var workouts: [Workout] = []
     var totalMiles: Double = 0.0
-    var totalTime: Time = Time(sec: 0, min: 0)
+    var totalTime: Time = Time(min: 0)
     var attendance: Int = 0
-    var averagePace: Time = Time(sec: 0, min: 0)
+    var averagePace: Time = Time(min: 0)
+
     
    
     
@@ -69,19 +70,24 @@ class Athlete: NSObject, NSCoding  {
         workouts.append(new)
         
         //Calculates the total miles, time, attendance, and pace and assigns it to the properties
-        let sumMiles = new.milesRan + totalMiles
-        let workoutTime = new.timeElapsed
-        let sumTime = workoutTime.add(number: totalTime)
-        let sumAttendance = new.didAttend
-        let sumPace = new.avgMilePace
-        if sumAttendance == true
-        {
-            attendance = attendance + 1
+        var sumMiles = 0.0
+        let sumTime = Time(sec: 0, min: 0)
+        var sumAttendance = 0
+        let sumPace = Time(sec: 0, min: 0)
+        for one in workouts {
+            sumMiles = sumMiles + one.milesRan
+            sumTime.addTime(time2: one.timeElapsed)
+            if one.didAttend {
+                sumAttendance += 1
+            }
+            sumPace.addTime(time2: one.timeElapsed)
         }
         totalMiles = sumMiles
         totalTime = sumTime
-        let timp = totalTime.divideTime(number: sumMiles)
-        let tmp = Time(sec: timp.seconds, min: timp.minutes)
+        attendance = sumAttendance
+        let timp = Double(totalTime.minutes)
+        let avgMin = Int(timp/totalMiles)
+        let tmp = Time(min: avgMin)
         averagePace = tmp
     }
     
@@ -137,13 +143,14 @@ class Athlete: NSObject, NSCoding  {
         return arr
     }
     
+
     
     func getWorkout(selectedDate: Date) -> Workout {
         
         //creates a temporary workout object
-        let tempTime: Time = Time(sec: 0, min: 0)
+        let tempTime: Time = Time(min: 0)
         var temp: Workout = Workout(miles: 0.0, timeE: tempTime, theDate: selectedDate, words: "No Workout Logged", attend: false )
-        
+
         let count = theAthlete!.workouts.count
         for i in stride(from: 0, to: count, by: 1)
         {
@@ -165,10 +172,7 @@ class Athlete: NSObject, NSCoding  {
         return temp
     }
     
-    
-    
 
-    
     
 }
 

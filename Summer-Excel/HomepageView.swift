@@ -43,9 +43,6 @@ class HomepageView: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     
-    @IBAction func secondsEdited(_ sender: Any) {
-        enabled()
-    }
     
     @IBAction func milesEdited(_ sender: Any) {
         enabled()
@@ -95,7 +92,7 @@ class HomepageView: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource 
     
     
     func enabled() {
-        if (mileInput.hasText && minuteInput.hasText && secondInput.hasText) {
+        if (mileInput.hasText && minuteInput.hasText) {
             enterButton.isEnabled = true
         } else {
             enterButton.isEnabled = false
@@ -109,19 +106,8 @@ class HomepageView: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource 
         dateInput.inputView = datePicker
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
-        let strDate = dateFormatter.string(from: self.datePicker.date)
+
 
     }
     
-
-    
-    //Presses return key
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        mileInput.resignFirstResponder()
-        secondInput.resignFirstResponder()
-        notesInput.resignFirstResponder()
-        dateInput.resignFirstResponder()
-        return true
-    }
-
     }
