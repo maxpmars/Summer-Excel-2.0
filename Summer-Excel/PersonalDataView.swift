@@ -137,7 +137,9 @@ extension PersonalDataView: JTAppleCalendarViewDataSource {
         let startDate = formatter.date(from: "2018 01 01")!
         let endDate = formatter.date(from: "2018 12 31")!
         
-        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
+        let parameters = ConfigurationParameters(startDate: startDate,
+                                                 endDate: endDate,
+                                                 numberOfRows: 5)
         return parameters
     }
     
