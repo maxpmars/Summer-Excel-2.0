@@ -58,16 +58,23 @@ class HomepageView: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource 
         dateInput.text = dateFormatter.string(from: self.datePicker.date)
         
     }
+
+    @IBAction func secondsEdited(_ sender: Any) {
+        enabled()
+    }
     
-  
     @IBAction func pressEnter(_ sender: Any) {
         //casts the buttons to usable variables
         let theseMiles = Double(mileInput.text!)
         let theseMinutes = Int(minuteInput.text!)
         let theseSeconds = Int(secondInput.text!)
         let thisTime = Time(sec: theseSeconds!, min: theseMinutes!)
-        let theseNotes = notesInput.text
+        var theseNotes = notesInput.text
         let attended = attendanceInput.isOn
+        if notesInput.hasText == false
+        {
+            theseNotes = "No notes entered"
+        }
         
         
         //creates the workout for this log
@@ -92,7 +99,7 @@ class HomepageView: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource 
     
     
     func enabled() {
-        if (mileInput.hasText && minuteInput.hasText) {
+        if (mileInput.hasText && minuteInput.hasText && secondInput.hasText) {
             enterButton.isEnabled = true
         } else {
             enterButton.isEnabled = false
