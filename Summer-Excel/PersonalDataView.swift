@@ -77,6 +77,10 @@ class PersonalDataView: SwipableTabVC {
         timeButton.isEnabled = false
         noteSection.isEditable = false
         
+        //open to todays date
+        calendarView.scrollToDate(Date(), animateScroll: false)
+        calendarView.selectDates([Date()])
+        
         //Calendar
         setUpCalendarView()
     }
@@ -139,7 +143,7 @@ extension PersonalDataView: JTAppleCalendarViewDataSource {
         
         let parameters = ConfigurationParameters(startDate: startDate,
                                                  endDate: endDate,
-                                                 numberOfRows: 5)
+                                                 numberOfRows: 6)
         return parameters
     }
     

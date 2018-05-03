@@ -119,7 +119,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="26.2" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVu-VP-3Pr">
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVu-VP-3Pr">
                                         <rect key="frame" x="84" y="11" width="97" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,7 +133,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="I ran a marathon today real fast" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ce2-v0-UuN">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ce2-v0-UuN">
                                         <rect key="frame" x="8" y="49" width="358" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -150,7 +150,7 @@
                                         <rect key="frame" x="269" y="11" width="97" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -252,31 +252,26 @@
                                             <rect key="frame" x="0.0" y="0.0" width="124" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXD-cQ-zwp">
-                                                    <rect key="frame" x="42" y="39.5" width="40" height="40"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.51207909539999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="amA-cZ-yUO"/>
-                                                        <constraint firstAttribute="width" constant="40" id="tzu-tD-OW8"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="20"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtQ-53-I2D">
                                                     <rect key="frame" x="38" y="47" width="48" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FXD-cQ-zwp">
+                                                    <rect key="frame" x="42" y="39" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.51207909539999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="ZtQ-53-I2D" firstAttribute="centerY" secondItem="ich-56-ZPK" secondAttribute="centerY" id="2Ao-sY-A2W"/>
-                                            <constraint firstItem="FXD-cQ-zwp" firstAttribute="centerY" secondItem="ich-56-ZPK" secondAttribute="centerY" id="RYB-1V-eAq"/>
-                                            <constraint firstItem="FXD-cQ-zwp" firstAttribute="centerX" secondItem="ich-56-ZPK" secondAttribute="centerX" id="WhC-vN-MSc"/>
                                             <constraint firstItem="ZtQ-53-I2D" firstAttribute="centerX" secondItem="ich-56-ZPK" secondAttribute="centerX" id="iSj-Y6-m2U"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -718,6 +713,7 @@
                         <outlet property="attendanceInput" destination="20C-6Q-Fmm" id="5yX-fn-VO6"/>
                         <outlet property="changeTeamateButton" destination="Ic3-vP-dVl" id="S0v-X6-Qe8"/>
                         <outlet property="dateInput" destination="uqi-0l-zlT" id="KjM-1C-8cp"/>
+                        <outlet property="enterButton" destination="jZo-da-vha" id="l6n-ZC-FeD"/>
                         <outlet property="mileInput" destination="or0-6X-vbt" id="srK-y0-tSq"/>
                         <outlet property="minuteInput" destination="M3X-BF-zeQ" id="3MG-YQ-kzO"/>
                         <outlet property="notesInput" destination="X4G-Ze-INk" id="a40-ha-dqV"/>
