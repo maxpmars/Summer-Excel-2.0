@@ -294,6 +294,7 @@
 				TargetAttributes = {
 					6F0653151FD9AF8D009C8587 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 96L2Y94678;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
@@ -705,10 +706,10 @@
 			baseConfigurationReference = 01F64A4ADB30DEF00D18678F /* Pods-Summer-Excel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 96L2Y94678;
 				INFOPLIST_FILE = "Summer-Excel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.Identifier;
+				PRODUCT_BUNDLE_IDENTIFIER = org.district196;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -720,10 +721,10 @@
 			baseConfigurationReference = DA0DB0C3BC0D57F9DED8124F /* Pods-Summer-Excel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 96L2Y94678;
 				INFOPLIST_FILE = "Summer-Excel/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.Identifier;
+				PRODUCT_BUNDLE_IDENTIFIER = org.district196;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
