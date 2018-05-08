@@ -21,7 +21,7 @@ class PersonalDataView: SwipableTabVC {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
-    
+    @IBOutlet weak var editWorkoutButton: UIButton!
     
     
     @IBAction func changeDate(_ sender: AnyObject) {
@@ -39,7 +39,7 @@ class PersonalDataView: SwipableTabVC {
         
     }
     
-    /*
+    
     @IBAction func editWorkout(_ sender: Any) {
         
         milesButton.isEnabled = true
@@ -49,9 +49,9 @@ class PersonalDataView: SwipableTabVC {
         }
         noteSection.isEditable = true
     }
-    */
+ 
 
-    /*
+    
     @IBAction func doneEditing(_ sender: Any) {
         //casts the buttons to usable variables
        let theseMiles = Double(milesButton.text!)
@@ -67,7 +67,7 @@ class PersonalDataView: SwipableTabVC {
         timeButton.isEnabled = false
         noteSection.isEditable = false
     }
-    */
+ 
 
 
     override func viewDidLoad() {

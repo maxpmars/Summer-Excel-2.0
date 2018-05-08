@@ -225,6 +225,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPf-og-fCm">
+                                        <rect key="frame" x="227" y="45" width="140" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Edit Workout"/>
+                                        <connections>
+                                            <action selector="doneEditing:" destination="4Q5-JY-ebO" eventType="editingDidEnd" id="hl5-rH-Wde"/>
+                                            <action selector="editWorkout:" destination="4Q5-JY-ebO" eventType="editingDidBegin" id="zQH-mH-NFx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -326,6 +336,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="calendarView" destination="KDP-eX-jvO" id="oq8-rj-buX"/>
+                        <outlet property="editWorkoutButton" destination="jPf-og-fCm" id="Shz-yc-mo7"/>
                         <outlet property="milesButton" destination="KVu-VP-3Pr" id="HH2-1t-zsk"/>
                         <outlet property="monthLabel" destination="ehu-Bw-jnJ" id="7xh-X4-u9F"/>
                         <outlet property="noteSection" destination="Ce2-v0-UuN" id="4RO-YC-PgS"/>
