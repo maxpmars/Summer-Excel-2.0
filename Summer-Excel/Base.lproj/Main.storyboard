@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excel Log" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M4-wP-pRG">
-                                <rect key="frame" x="119.5" y="20" width="136.5" height="62"/>
+                                <rect key="frame" x="119.5" y="20" width="137" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="UKR-bT-Jve"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUm-XF-OYg">
-                                <rect key="frame" x="149" y="470" width="76" height="52"/>
+                                <rect key="frame" x="149.5" y="470" width="76" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Jxb-7B-YZt"/>
                                 </constraints>
@@ -53,7 +53,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxU-Nr-xhG">
-                                <rect key="frame" x="217" y="375" width="142" height="30"/>
+                                <rect key="frame" x="217.5" y="375" width="142" height="30"/>
                                 <color key="backgroundColor" red="0.102908606" green="0.51269429150000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="1OE-Ao-hQD"/>
@@ -251,10 +251,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="124" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FXD-cQ-zwp">
-                                                    <rect key="frame" x="42" y="39" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXD-cQ-zwp">
+                                                    <rect key="frame" x="42" y="40" width="40" height="40"/>
                                                     <color key="backgroundColor" red="0.0" green="0.51207909539999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="DAr-di-uTw"/>
+                                                        <constraint firstAttribute="width" constant="40" id="ZLv-11-AkQ"/>
+                                                        <constraint firstAttribute="height" constant="40" id="rVd-cy-KEb"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="20"/>
@@ -271,8 +275,19 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="ZtQ-53-I2D" firstAttribute="centerY" secondItem="ich-56-ZPK" secondAttribute="centerY" id="2Ao-sY-A2W"/>
+                                            <constraint firstItem="FXD-cQ-zwp" firstAttribute="leading" secondItem="ich-56-ZPK" secondAttribute="leadingMargin" constant="34" id="CIE-8i-m5m"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="FXD-cQ-zwp" secondAttribute="bottom" constant="31" id="NEX-bZ-yvX"/>
+                                            <constraint firstItem="FXD-cQ-zwp" firstAttribute="centerX" secondItem="ich-56-ZPK" secondAttribute="centerX" id="QHy-rm-Hdo"/>
                                             <constraint firstItem="ZtQ-53-I2D" firstAttribute="centerX" secondItem="ich-56-ZPK" secondAttribute="centerX" id="iSj-Y6-m2U"/>
+                                            <constraint firstItem="FXD-cQ-zwp" firstAttribute="top" secondItem="ich-56-ZPK" secondAttribute="topMargin" constant="32" id="oM6-bo-dAa"/>
+                                            <constraint firstItem="FXD-cQ-zwp" firstAttribute="centerY" secondItem="ich-56-ZPK" secondAttribute="centerY" id="vFc-OD-woa"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="FXD-cQ-zwp" secondAttribute="trailing" constant="34" id="wqg-Ui-ncw"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dateLabel" destination="ZtQ-53-I2D" id="UN4-ps-wxh"/>
                                             <outlet property="selectedBackgroundView" destination="FXD-cQ-zwp" id="bYz-Wr-FAI"/>
@@ -282,7 +297,7 @@
                                 </cells>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cellSize">
-                                        <real key="value" value="59.149999999999999"/>
+                                        <real key="value" value="53.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -477,7 +492,7 @@
                                             <action selector="dateEdited:" destination="DmF-hA-eXZ" eventType="editingChanged" id="HsM-ap-PP7"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3af-bO-hRW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Miles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3af-bO-hRW">
                                         <rect key="frame" x="16" y="134" width="70" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
@@ -587,13 +602,13 @@
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szU-RE-24B">
-                                        <rect key="frame" x="177.5" y="191" width="114" height="36"/>
+                                        <rect key="frame" x="177.5" y="191" width="113.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oDo-t7-bSJ">
-                                        <rect key="frame" x="304.5" y="194" width="37.5" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oDo-t7-bSJ">
+                                        <rect key="frame" x="304" y="194" width="38" height="30"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
