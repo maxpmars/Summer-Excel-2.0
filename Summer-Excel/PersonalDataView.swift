@@ -39,7 +39,7 @@ class PersonalDataView: SwipableTabVC {
         
     }
     
-    
+    /*
     @IBAction func editWorkout(_ sender: Any) {
         
         milesButton.isEnabled = true
@@ -49,9 +49,9 @@ class PersonalDataView: SwipableTabVC {
         }
         noteSection.isEditable = true
     }
- 
+    */
 
-    
+    /*
     @IBAction func doneEditing(_ sender: Any) {
         //casts the buttons to usable variables
        let theseMiles = Double(milesButton.text!)
@@ -67,7 +67,7 @@ class PersonalDataView: SwipableTabVC {
         timeButton.isEnabled = false
         noteSection.isEditable = false
     }
- 
+    */
 
 
     override func viewDidLoad() {
