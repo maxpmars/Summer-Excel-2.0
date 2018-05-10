@@ -13,22 +13,15 @@ class Time: NSObject, NSCoding {
     var seconds: Int
     //Integer that represents the minutes of the time the time object is representing
     var minutes: Int
-    
-    
-
-    
-
-    init(min: Int)
-    {
-        minutes = min
-        seconds = 0
-    }
+    //Integer that represents the total Seconds of the time in the time object representing
+    var totalSeconds: Int
     
 
     init(sec: Int, min: Int)
     {
-        seconds = 0
+        seconds = sec
         minutes = min
+        totalSeconds = (minutes * 60) + seconds
     }
     
     required convenience init?(coder decoder: NSCoder)
@@ -56,6 +49,7 @@ class Time: NSObject, NSCoding {
         
         seconds = seconds + sec
         minutes = minutes + min
+        totalSeconds = (minutes * 60) + seconds
     }
     
     //This function will allow the instance variables of a time object be listed in a way for the user to view the time that the object is associated with
@@ -91,11 +85,11 @@ class Time: NSObject, NSCoding {
     func divideTime(number: Double) -> Time
     {
         let num = Int(number)
-        let secondsTotal = (minutes * 60) + seconds
-        let averageTotalSeconds = secondsTotal/num
-        let averagePaceMinutes = averageTotalSeconds/60
-        let averagePaceSeconds = secondsTotal % num
-        let result = Time(sec: averagePaceSeconds, min: averagePaceMinutes)
+        let totalSeconds = (minutes * 60) + seconds
+        let averageTotalSeconds = totalSeconds/num
+        let averageMinutes = averageTotalSeconds/60
+        let averageSeconds = averageTotalSeconds % 60
+        let result = Time(sec: averageSeconds, min: averageMinutes)
         return result
     }
     

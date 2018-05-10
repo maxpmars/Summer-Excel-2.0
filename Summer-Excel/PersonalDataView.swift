@@ -56,7 +56,7 @@ class PersonalDataView: SwipableTabVC {
         //casts the buttons to usable variables
        let theseMiles = Double(milesButton.text!)
        let theseMinutes = Int(timeButton.text!)
-        let thisTime = Time(min: theseMinutes!)
+        let thisTime = Time(sec: 0, min: theseMinutes!)
        let theseNotes = noteSection.text
        
         theAthlete?.getWorkout(selectedDate: datePicker.date).milesRan = theseMiles!
