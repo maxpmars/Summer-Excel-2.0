@@ -21,7 +21,7 @@ class PersonalDataView: SwipableTabVC {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
-    
+    @IBOutlet weak var editWorkoutButton: UIButton!
     
     
     @IBAction func changeDate(_ sender: AnyObject) {
@@ -39,7 +39,7 @@ class PersonalDataView: SwipableTabVC {
         
     }
     
-    /*
+    
     @IBAction func editWorkout(_ sender: Any) {
         
         milesButton.isEnabled = true
@@ -49,14 +49,14 @@ class PersonalDataView: SwipableTabVC {
         }
         noteSection.isEditable = true
     }
-    */
+ 
 
-    /*
+    
     @IBAction func doneEditing(_ sender: Any) {
         //casts the buttons to usable variables
        let theseMiles = Double(milesButton.text!)
        let theseMinutes = Int(timeButton.text!)
-       let thisTime = Time(min: theseMinutes!)
+        let thisTime = Time(min: theseMinutes!)
        let theseNotes = noteSection.text
        
         theAthlete?.getWorkout(selectedDate: datePicker.date).milesRan = theseMiles!
@@ -67,7 +67,7 @@ class PersonalDataView: SwipableTabVC {
         timeButton.isEnabled = false
         noteSection.isEditable = false
     }
-    */
+ 
 
 
     override func viewDidLoad() {
@@ -76,6 +76,10 @@ class PersonalDataView: SwipableTabVC {
         milesButton.isEnabled = false
         timeButton.isEnabled = false
         noteSection.isEditable = false
+        
+        //open to todays date
+        calendarView.scrollToDate(Date(), animateScroll: false)
+        calendarView.selectDates([Date()])
         
         //Calendar
         setUpCalendarView()
@@ -139,7 +143,7 @@ extension PersonalDataView: JTAppleCalendarViewDataSource {
         
         let parameters = ConfigurationParameters(startDate: startDate,
                                                  endDate: endDate,
-                                                 numberOfRows: 5)
+                                                 numberOfRows: 6)
         return parameters
     }
     

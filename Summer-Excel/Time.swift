@@ -25,12 +25,10 @@ class Time: NSObject, NSCoding {
     }
     
 
-    
     init(sec: Int, min: Int)
     {
         seconds = 0
         minutes = min
-        
     }
     
     required convenience init?(coder decoder: NSCoder)
