@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomepageView: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource {
+class HomepageView: SwipableTabVC {
     
     @IBOutlet weak var mileInput: UITextField!
     @IBOutlet weak var minuteInput: UITextField!
@@ -26,22 +26,7 @@ class HomepageView: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource 
     var workoutArr: [Workout] = []
     
 
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1 
-    }
-    
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let str = "Workout \(row)"
-        return str
-    }
-    
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        //let workoutArr: [Workout] = (theAthlete?.getWorkoutArray(selectedDate: datePicker.date))!
-        return workoutArr.count
-    }
-    
+
     
     
     @IBAction func milesEdited(_ sender: Any) {
@@ -109,11 +94,13 @@ class HomepageView: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //keyboard displays when dateInput is selected
         datePicker.datePickerMode = UIDatePickerMode.date
         dateInput.inputView = datePicker
+ 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
-
+        dateInput.text = dateFormatter.string(from: self.datePicker.date)
 
     }
     
