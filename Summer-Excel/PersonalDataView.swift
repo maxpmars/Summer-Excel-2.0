@@ -103,6 +103,7 @@ class PersonalDataView: SwipableTabVC {
             self.formatter.dateFormat = "MMMM"
             self.monthLabel.text = self.formatter.string(from: date)
             
+            
         }
         
         

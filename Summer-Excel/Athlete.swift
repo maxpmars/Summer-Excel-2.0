@@ -174,5 +174,32 @@ class Athlete: NSObject, NSCoding  {
     
 
     
+    func hasWorkout(selectedDate: Date) -> Bool {
+        var torf = false
+        
+        let count = theAthlete!.workouts.count
+        for i in stride(from: 0, to: count, by: 1){
+            //creates strings of the dates to be compared
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy"
+            let workoutSTR = dateFormatter.string(from: (theAthlete?.workouts[i].date)! )
+            let selectedDateSTR = dateFormatter.string(from: selectedDate)
+            //if workout
+            if (workoutSTR == selectedDateSTR){
+                torf = true
+            }
+            
+        }
+        return torf
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
