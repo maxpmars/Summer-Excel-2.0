@@ -91,6 +91,7 @@ class EditTeammatePopUp: HomepageView, UITextFieldDelegate {
         UserDefaults.standard.set(data, forKey: "theTeam")
     }
     
+   
     override func enabled() {
         if (gradeNine.isSelected || gradeTen.isSelected || gradeEleven.isSelected || gradeTwelve.isSelected) && firstNameTextField.hasText && lastNameTextField.hasText {
             confirmButton.isEnabled = true
@@ -99,6 +100,9 @@ class EditTeammatePopUp: HomepageView, UITextFieldDelegate {
         }
     }
     
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true)
+    }
     @IBAction func confirmEdit(_ sender: Any) {
         let name = firstNameTextField.text! + " " + lastNameTextField.text!
         theAthlete?.thisName = name
@@ -120,6 +124,7 @@ class EditTeammatePopUp: HomepageView, UITextFieldDelegate {
         }
         let data = NSKeyedArchiver.archivedData(withRootObject: theTeam)
         UserDefaults.standard.set(data, forKey: "theTeam")
+        dismiss(animated: true)
     }
     
 }

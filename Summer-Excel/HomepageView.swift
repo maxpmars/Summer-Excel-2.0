@@ -104,4 +104,5 @@ class HomepageView: SwipableTabVC {
 */
     }
     
-    }
+
+}

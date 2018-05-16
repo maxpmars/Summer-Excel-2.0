@@ -715,7 +715,7 @@
                                 <rect key="frame" x="279" y="20" width="80" height="30"/>
                                 <state key="normal" title="Edit Runner"/>
                                 <connections>
-                                    <segue destination="b4o-22-7Wz" kind="show" id="9Yu-dk-xsh"/>
+                                    <segue destination="b4o-22-7Wz" kind="show" id="3rQ-i6-NNg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -753,7 +753,7 @@
         <!--Edit Teammate Pop Up-->
         <scene sceneID="DSj-Od-FOH">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="b4o-22-7Wz" customClass="EditTeammatePopUp" customModule="Summer_Excel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="editRunnerPopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="b4o-22-7Wz" customClass="EditTeammatePopUp" customModule="Summer_Excel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MgQ-ro-Dca"/>
                         <viewControllerLayoutGuide type="bottom" id="SX3-8v-32h"/>
@@ -768,6 +768,10 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zwK-RG-jSZ">
                                         <rect key="frame" x="0.0" y="0.0" width="316" height="250"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="0Zd-YH-dom"/>
+                                            <constraint firstAttribute="width" constant="316" id="4KS-1i-8jN"/>
+                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="261-zQ-Fxj">
                                         <rect key="frame" x="0.0" y="206" width="316" height="44"/>
@@ -861,19 +865,19 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMf-hs-eJ2">
                                         <rect key="frame" x="8" y="0.0" width="69" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="69" id="Dhr-mr-whK"/>
+                                            <constraint firstAttribute="width" constant="69" id="EMa-wI-P5F"/>
                                         </constraints>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="DmF-hA-eXZ" kind="show" id="EWy-ww-Fr6"/>
+                                            <action selector="cancel:" destination="b4o-22-7Wz" eventType="touchUpInside" id="ZqP-Nv-tbT"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOI-9q-zru">
                                         <rect key="frame" x="231" y="0.0" width="69" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="69" id="hGO-WV-3Cb"/>
+                                            <constraint firstAttribute="width" constant="69" id="5yc-az-QvB"/>
                                         </constraints>
                                         <state key="normal" title="Delete">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -886,31 +890,29 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="MOI-9q-zru" secondAttribute="trailing" constant="16" id="3Fi-R6-aaY"/>
-                                    <constraint firstItem="UMf-hs-eJ2" firstAttribute="leading" secondItem="kTr-NV-CwP" secondAttribute="leadingMargin" id="8WP-kO-1sw"/>
-                                    <constraint firstItem="t0K-PG-vUa" firstAttribute="top" secondItem="UMf-hs-eJ2" secondAttribute="bottom" constant="1" id="8Yh-uQ-KoF"/>
-                                    <constraint firstAttribute="trailing" secondItem="zwK-RG-jSZ" secondAttribute="trailing" id="9WI-c1-i02"/>
-                                    <constraint firstItem="UMf-hs-eJ2" firstAttribute="leading" secondItem="t0K-PG-vUa" secondAttribute="leading" id="ApO-Td-VeF"/>
-                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="leading" secondItem="261-zQ-Fxj" secondAttribute="leading" id="GWe-En-E74"/>
-                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="bottom" secondItem="261-zQ-Fxj" secondAttribute="bottom" id="Ozu-OC-wIX"/>
-                                    <constraint firstItem="MOI-9q-zru" firstAttribute="trailing" secondItem="kC6-6Q-Lpl" secondAttribute="trailing" id="RzR-oy-ZVA"/>
-                                    <constraint firstItem="kC6-6Q-Lpl" firstAttribute="top" secondItem="MOI-9q-zru" secondAttribute="bottom" constant="1" id="SVJ-ul-bJZ"/>
-                                    <constraint firstItem="UMf-hs-eJ2" firstAttribute="trailing" secondItem="t0K-PG-vUa" secondAttribute="trailing" id="UWW-XE-nzR"/>
-                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="top" secondItem="UMf-hs-eJ2" secondAttribute="top" id="X3I-ie-Q1O"/>
-                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="trailing" secondItem="261-zQ-Fxj" secondAttribute="trailing" id="aKC-JH-SMr"/>
-                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="top" secondItem="kTr-NV-CwP" secondAttribute="top" id="jlU-62-zg5"/>
-                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="leading" secondItem="kTr-NV-CwP" secondAttribute="leading" id="kDd-dR-MNX"/>
-                                    <constraint firstAttribute="bottom" secondItem="zwK-RG-jSZ" secondAttribute="bottom" id="oZe-Wj-bir"/>
-                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="top" secondItem="MOI-9q-zru" secondAttribute="top" id="pY9-Wt-X0Q"/>
+                                    <constraint firstItem="MOI-9q-zru" firstAttribute="trailing" secondItem="kC6-6Q-Lpl" secondAttribute="trailing" id="1OL-JX-GaU"/>
+                                    <constraint firstItem="UMf-hs-eJ2" firstAttribute="leading" secondItem="kTr-NV-CwP" secondAttribute="leadingMargin" id="1jr-Ro-Eds"/>
+                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="bottom" secondItem="261-zQ-Fxj" secondAttribute="bottom" id="3B7-Md-Aah"/>
+                                    <constraint firstItem="kC6-6Q-Lpl" firstAttribute="top" secondItem="MOI-9q-zru" secondAttribute="bottom" constant="1" id="759-N5-BCv"/>
+                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="top" secondItem="kTr-NV-CwP" secondAttribute="top" id="CCZ-Gi-coG"/>
+                                    <constraint firstItem="t0K-PG-vUa" firstAttribute="top" secondItem="UMf-hs-eJ2" secondAttribute="bottom" constant="1" id="CpD-E5-cbq"/>
+                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="top" secondItem="UMf-hs-eJ2" secondAttribute="top" id="D2d-FL-SX7"/>
+                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="centerY" secondItem="kTr-NV-CwP" secondAttribute="centerY" id="QLA-W4-OyP"/>
+                                    <constraint firstItem="UMf-hs-eJ2" firstAttribute="leading" secondItem="t0K-PG-vUa" secondAttribute="leading" id="Wzm-ut-jSv"/>
+                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="top" secondItem="MOI-9q-zru" secondAttribute="top" id="aiL-oA-inc"/>
+                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="leading" secondItem="261-zQ-Fxj" secondAttribute="leading" id="hxb-yA-s0p"/>
+                                    <constraint firstAttribute="trailing" secondItem="MOI-9q-zru" secondAttribute="trailing" constant="16" id="ikz-Kk-HNX"/>
+                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="centerX" secondItem="kTr-NV-CwP" secondAttribute="centerX" id="p60-Ky-1Io"/>
+                                    <constraint firstItem="UMf-hs-eJ2" firstAttribute="trailing" secondItem="t0K-PG-vUa" secondAttribute="trailing" id="thU-RG-Iyv"/>
+                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="leading" secondItem="kTr-NV-CwP" secondAttribute="leading" id="uJh-vW-ab6"/>
+                                    <constraint firstItem="zwK-RG-jSZ" firstAttribute="trailing" secondItem="261-zQ-Fxj" secondAttribute="trailing" id="vAn-nU-LY6"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kTr-NV-CwP" firstAttribute="centerX" secondItem="wvk-I8-8AJ" secondAttribute="centerX" id="CEa-eG-QEL"/>
-                            <constraint firstItem="kTr-NV-CwP" firstAttribute="centerY" secondItem="wvk-I8-8AJ" secondAttribute="centerY" id="Hmg-Gx-y0k"/>
-                            <constraint firstItem="kTr-NV-CwP" firstAttribute="top" secondItem="MgQ-ro-Dca" secondAttribute="bottom" constant="188" id="IJU-jK-wyG"/>
-                            <constraint firstItem="kTr-NV-CwP" firstAttribute="leading" secondItem="wvk-I8-8AJ" secondAttribute="leadingMargin" constant="13" id="aeq-7n-m6s"/>
+                            <constraint firstItem="kTr-NV-CwP" firstAttribute="centerX" secondItem="wvk-I8-8AJ" secondAttribute="centerX" id="ZZy-Jc-2V6"/>
+                            <constraint firstItem="kTr-NV-CwP" firstAttribute="centerY" secondItem="wvk-I8-8AJ" secondAttribute="centerY" id="icc-jA-nrV"/>
                         </constraints>
                     </view>
                     <connections>
@@ -925,7 +927,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88X-Zt-tHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="-992"/>
+            <point key="canvasLocation" x="1087" y="-992"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="afb-1j-c1A">
@@ -1117,7 +1119,8 @@
         <image name="Team.png" width="60" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EWy-ww-Fr6"/>
-        <segue reference="x0v-vt-xJC"/>
+        <segue reference="3rQ-i6-NNg"/>
+        <segue reference="fwZ-mV-FaM"/>
+        <segue reference="JuG-nM-2ms"/>
     </inferredMetricsTieBreakers>
 </document>
