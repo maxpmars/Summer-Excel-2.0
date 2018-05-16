@@ -1119,6 +1119,8 @@
         <image name="Team.png" width="60" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dJQ-8q-ZGv"/>
+        <segue reference="3rQ-i6-NNg"/>
+        <segue reference="fwZ-mV-FaM"/>
+        <segue reference="JuG-nM-2ms"/>
     </inferredMetricsTieBreakers>
 </document>
