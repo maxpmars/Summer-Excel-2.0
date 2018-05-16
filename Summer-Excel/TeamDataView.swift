@@ -71,7 +71,7 @@ class TeamDataView: SwipableTabVC, UITableViewDataSource, UITableViewDelegate, M
         if int == 2
         {
             //Sorts by average pace
-            theTeam = theTeam.sorted(by:({$0.averagePace.seconds > $1.averagePace.seconds}))
+            theTeam = theTeam.sorted(by:({$0.averagePace.totalSeconds < $1.averagePace.totalSeconds}))
             tView?.reloadData()
             int += 1
             print("Average Pace")
