@@ -267,14 +267,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="124" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXD-cQ-zwp">
+                                                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FXD-cQ-zwp">
                                                     <rect key="frame" x="42" y="40" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.0" green="0.51207909539999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="DAr-di-uTw"/>
-                                                        <constraint firstAttribute="width" constant="40" id="ZLv-11-AkQ"/>
-                                                        <constraint firstAttribute="height" constant="40" id="rVd-cy-KEb"/>
-                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="20"/>
@@ -282,7 +278,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtQ-53-I2D">
-                                                    <rect key="frame" x="38" y="47" width="48" height="24"/>
+                                                    <rect key="frame" x="38" y="8" width="48" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -290,14 +286,8 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="ZtQ-53-I2D" firstAttribute="centerY" secondItem="ich-56-ZPK" secondAttribute="centerY" id="2Ao-sY-A2W"/>
-                                            <constraint firstItem="FXD-cQ-zwp" firstAttribute="leading" secondItem="ich-56-ZPK" secondAttribute="leadingMargin" constant="34" id="CIE-8i-m5m"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="FXD-cQ-zwp" secondAttribute="bottom" constant="31" id="NEX-bZ-yvX"/>
-                                            <constraint firstItem="FXD-cQ-zwp" firstAttribute="centerX" secondItem="ich-56-ZPK" secondAttribute="centerX" id="QHy-rm-Hdo"/>
+                                            <constraint firstItem="ZtQ-53-I2D" firstAttribute="top" secondItem="ich-56-ZPK" secondAttribute="topMargin" id="EAN-CH-tDi"/>
                                             <constraint firstItem="ZtQ-53-I2D" firstAttribute="centerX" secondItem="ich-56-ZPK" secondAttribute="centerX" id="iSj-Y6-m2U"/>
-                                            <constraint firstItem="FXD-cQ-zwp" firstAttribute="top" secondItem="ich-56-ZPK" secondAttribute="topMargin" constant="32" id="oM6-bo-dAa"/>
-                                            <constraint firstItem="FXD-cQ-zwp" firstAttribute="centerY" secondItem="ich-56-ZPK" secondAttribute="centerY" id="vFc-OD-woa"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="FXD-cQ-zwp" secondAttribute="trailing" constant="34" id="wqg-Ui-ncw"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
