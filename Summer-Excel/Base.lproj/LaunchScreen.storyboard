@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +21,52 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5M-XL-Z00">
+                                <rect key="frame" x="139" y="303" width="96" height="60"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Personal" translatesAutoresizingMaskIntoConstraints="NO" id="k9b-Uv-ZXR">
+                                        <rect key="frame" x="21" y="9.5" width="55" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="CkK-wJ-Ziq"/>
+                                            <constraint firstAttribute="height" constant="41" id="sia-HQ-0Hr"/>
+                                            <constraint firstAttribute="width" secondItem="k9b-Uv-ZXR" secondAttribute="height" multiplier="55:41" id="t0e-C9-ZGk"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="k9b-Uv-ZXR" firstAttribute="centerX" secondItem="E5M-XL-Z00" secondAttribute="centerX" id="2Ds-R8-iyP"/>
+                                    <constraint firstAttribute="width" constant="96" id="3cl-W5-CwN"/>
+                                    <constraint firstAttribute="height" constant="60" id="Fxa-Ve-RHa"/>
+                                    <constraint firstItem="k9b-Uv-ZXR" firstAttribute="centerY" secondItem="E5M-XL-Z00" secondAttribute="centerY" id="MER-dW-I17"/>
+                                    <constraint firstAttribute="width" secondItem="E5M-XL-Z00" secondAttribute="height" multiplier="8:5" id="gmQ-Oo-XSV"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="8c8-1U-uxo">
+                                <rect key="frame" x="177" y="389" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8c8-1U-uxo" secondAttribute="height" multiplier="1:1" id="4n6-sN-Lqz"/>
+                                    <constraint firstAttribute="height" constant="20" id="9wW-m6-FMt"/>
+                                    <constraint firstAttribute="width" constant="20" id="RdA-V2-o0o"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8c8-1U-uxo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="65.5" id="BAt-vV-t9R"/>
+                            <constraint firstItem="E5M-XL-Z00" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="EvP-NF-T5B"/>
+                            <constraint firstItem="E5M-XL-Z00" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="IX0-eh-PxY"/>
+                            <constraint firstItem="8c8-1U-uxo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="htf-rx-p3W"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Personal" width="60" height="40"/>
+    </resources>
 </document>

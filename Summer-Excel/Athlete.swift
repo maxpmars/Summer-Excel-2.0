@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class Athlete: NSObject, NSCoding  {
     
@@ -18,18 +19,19 @@ class Athlete: NSObject, NSCoding  {
     var totalTime: Time = Time(min: 0)
     var attendance: Int = 0
     var averagePace: Time = Time(min: 0)
-
+    var id: String = ""
     
    
     
-    init(name: String, grade: Int) {
+    init(name: String, grade: Int, newId: String) {
         thisName = name
         thisGrade = grade
+        id = newId
         totalMiles = 0
         attendance = 0
     }
     
-    init(name: String, grade: Int, workoutArray: [Workout], totMi: Double, totTi: Time, attenda: Int, aver: Time)
+    init(name: String, grade: Int, workoutArray: [Workout], totMi: Double, totTi: Time, attenda: Int, aver: Time, newId: String)
     {
         thisName = name
         thisGrade = grade
@@ -38,7 +40,7 @@ class Athlete: NSObject, NSCoding  {
         totalTime = totTi
         attendance = attenda
         averagePace = aver
-        
+        id = newId
     }
 
     
@@ -50,7 +52,8 @@ class Athlete: NSObject, NSCoding  {
         let totTime = decoder.decodeObject(forKey: "totalTime") as! Time
         let attend = decoder.decodeInteger(forKey: "attendance")
         let avP = decoder.decodeObject(forKey: "averagePace") as! Time
-        self.init(name: name!, grade: grade, workoutArray: wrkouts, totMi: miles, totTi: totTime, attenda: attend, aver: avP)
+        let key = decoder.decodeObject(forKey: "thisId") as? String
+        self.init(name: name!, grade: grade, workoutArray: wrkouts, totMi: miles, totTi: totTime, attenda: attend, aver: avP, newId: key!)
     }
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self.thisName, forKey: "thisName")
@@ -60,6 +63,7 @@ class Athlete: NSObject, NSCoding  {
         aCoder.encode(self.totalTime, forKey: "totalTime")
         aCoder.encode(self.attendance, forKey: "attendance")
         aCoder.encode(self.averagePace, forKey: "averagePace")
+        aCoder.encode(self.id, forKey: "thisId")
     }
     
     
@@ -89,6 +93,20 @@ class Athlete: NSObject, NSCoding  {
         let avgMin = Int(timp/totalMiles)
         let tmp = Time(min: avgMin)
         averagePace = tmp
+        
+        let format = DateFormatter()
+        format.dateStyle = .medium
+        format.timeStyle = .none
+        format.locale = Locale(identifier: "en_US")
+        
+        teamRef.child(id).child("workouts").child(new.id).child("miles").setValue(new.milesRan)
+        let stringDate = format.string(from: new.date)
+        teamRef.child(id).child("workouts").child(new.id).child("date").setValue(stringDate)
+        teamRef.child(id).child("workouts").child(new.id).child("notes").setValue(new.notes)
+        teamRef.child(id).child("workouts").child(new.id).child("attendance").setValue(new.didAttend)
+        teamRef.child(id).child("workouts").child(new.id).child("time").child("minutes").setValue(new.timeElapsed.minutes)
+        teamRef.child(id).child("workouts").child(new.id).child("time").child("seconds").setValue(new.timeElapsed.seconds)
+        
     }
     
     
@@ -149,7 +167,7 @@ class Athlete: NSObject, NSCoding  {
         
         //creates a temporary workout object
         let tempTime: Time = Time(min: 0)
-        var temp: Workout = Workout(miles: 0.0, timeE: tempTime, theDate: selectedDate, words: "No Workout Logged", attend: false )
+        var temp: Workout = Workout(miles: 0.0, timeE: tempTime, theDate: selectedDate, words: "No Workout Logged", attend: false, thisId: "")
 
         let count = theAthlete!.workouts.count
         for i in stride(from: 0, to: count, by: 1)
