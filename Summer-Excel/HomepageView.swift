@@ -95,13 +95,12 @@ class HomepageView: SwipableTabVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         //keyboard displays when dateInput is selected
-       /* datePicker.datePickerMode = UIDatePickerMode.date
+       datePicker.datePickerMode = UIDatePickerMode.date
         dateInput.inputView = datePicker
  
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         dateInput.text = dateFormatter.string(from: self.datePicker.date)
-*/
     }
     
 
