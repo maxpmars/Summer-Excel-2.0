@@ -60,8 +60,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        //Read Data from Firebase if athlete is modified (workout is added)
+        //Read Data from Firebase if athlete is modified (workout is added or athlete is edited)
         teamRef.observe(DataEventType.childChanged) { (snapshot) in
+            
+            //athlete is edited
+            for eachMate in theTeam {
+                if snapshot.key == eachMate.id {
+                    let newName = snapshot.childSnapshot(forPath: "name").value as! String
+                    let newGrade = snapshot.childSnapshot(forPath: "grade").value as! Int
+                    eachMate.thisName = newName
+                    eachMate.thisGrade = newGrade
+                }
+            }
+            
+            //workout is added code
             if snapshot.childSnapshot(forPath: "key").exists() && snapshot.childSnapshot(forPath: "workouts").exists() {
                 let athleteKey = snapshot.childSnapshot(forPath: "key").value as! String
                 let workouts = snapshot.childSnapshot(forPath: "workouts")
@@ -92,6 +104,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                 for athleteWorkout in eachAthlete.workouts {
                                     if athleteWorkout.id == newWorkout.id {
                                         isNew = false
+                                        athleteWorkout.milesRan = newWorkout.milesRan
+                                        athleteWorkout.timeElapsed = newWorkout.timeElapsed
+                                        athleteWorkout.notes = newWorkout.notes
                                     }
                                 }
                                 if isNew {

@@ -89,6 +89,9 @@ class EditTeammatePopUp: HomepageView, UITextFieldDelegate {
         theTeam.remove(at: index!)
         let data = NSKeyedArchiver.archivedData(withRootObject: theTeam)
         UserDefaults.standard.set(data, forKey: "theTeam")
+        
+        let key = theAthlete?.id
+        teamRef.child(key!).removeValue()
     }
     
    
@@ -103,27 +106,36 @@ class EditTeammatePopUp: HomepageView, UITextFieldDelegate {
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true)
     }
+    
     @IBAction func confirmEdit(_ sender: Any) {
         let name = firstNameTextField.text! + " " + lastNameTextField.text!
-        theAthlete?.thisName = name
+        var grade: Int
         if gradeNine.isSelected == true
         {
-            theAthlete?.thisGrade = 9
+            grade = 9
         }
         else if gradeTen.isSelected == true
         {
-            theAthlete?.thisGrade = 10
+            grade = 10
         }
         else if gradeEleven.isSelected == true
         {
-            theAthlete?.thisGrade = 11
+            grade = 11
         }
         else
         {
-            theAthlete?.thisGrade = 12
+            grade = 12
         }
+        theAthlete?.thisName = name
+        theAthlete?.thisGrade = grade
+        
         let data = NSKeyedArchiver.archivedData(withRootObject: theTeam)
         UserDefaults.standard.set(data, forKey: "theTeam")
+        
+        let key = theAthlete?.id
+        teamRef.child(key!).child("name").setValue(name)
+        teamRef.child(key!).child("grade").setValue(grade)
+        
         dismiss(animated: true)
     }
     

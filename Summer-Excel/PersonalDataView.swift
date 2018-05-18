@@ -54,14 +54,21 @@ class PersonalDataView: SwipableTabVC {
     
     @IBAction func doneEditing(_ sender: Any) {
         //casts the buttons to usable variables
-       let theseMiles = Double(milesButton.text!)
-       let theseMinutes = Int(timeButton.text!)
+        let theseMiles = Double(milesButton.text!)
+        let theseMinutes = Int(timeButton.text!)
         let thisTime = Time(sec: 0, min: theseMinutes!)
-       let theseNotes = noteSection.text
+        let theseNotes = noteSection.text
+        
+        let editingWorkout = theAthlete?.getWorkout(selectedDate: datePicker.date)
        
-        theAthlete?.getWorkout(selectedDate: datePicker.date).milesRan = theseMiles!
-        theAthlete?.getWorkout(selectedDate: datePicker.date).timeElapsed = thisTime
-        theAthlete?.getWorkout(selectedDate: datePicker.date).notes = theseNotes!
+        editingWorkout?.milesRan = theseMiles!
+        editingWorkout?.timeElapsed = thisTime
+        editingWorkout?.notes = theseNotes!
+        
+        teamRef.child((theAthlete?.id)!).child("workouts").child((editingWorkout?.id)!).child("miles").setValue(theseMiles)
+        teamRef.child((theAthlete?.id)!).child("workouts").child((editingWorkout?.id)!).child("notes").setValue(theseNotes)
+        teamRef.child((theAthlete?.id)!).child("workouts").child((editingWorkout?.id)!).child("time").child("minutes").setValue(thisTime.minutes)
+        teamRef.child((theAthlete?.id)!).child("workouts").child((editingWorkout?.id)!).child("time").child("seconds").setValue(thisTime.seconds)
         
         milesButton.isEnabled = false
         timeButton.isEnabled = false
