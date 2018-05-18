@@ -22,18 +22,19 @@ class PersonalDataView: SwipableTabVC {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var editWorkoutButton: UIButton!
+    var dateInCalendar: Date!
     
     
     @IBAction func changeDate(_ sender: AnyObject) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         //everytime the date is changed in the datePicker, the label changes with it.
-        let miles = theAthlete?.getWorkout(selectedDate: datePicker.date).milesRan
+        let miles = theAthlete?.getWorkout(selectedDate: dateInCalendar).milesRan
         let milesStr = "\(miles ?? 0)"
         milesButton.text = milesStr
-        let minutes = theAthlete?.getWorkout(selectedDate: datePicker.date).timeElapsed
+        let minutes = theAthlete?.getWorkout(selectedDate: dateInCalendar).timeElapsed
         timeButton.text = minutes?.toString()
-        noteSection.text = theAthlete?.getWorkout(selectedDate: datePicker.date).notes
+        noteSection.text = theAthlete?.getWorkout(selectedDate: dateInCalendar).notes
         //sets the miles, time and notes section to the current value stored for that athlete on that day
     
         
@@ -55,17 +56,21 @@ class PersonalDataView: SwipableTabVC {
     @IBAction func doneEditing(_ sender: Any) {
         //casts the buttons to usable variables
        let theseMiles = Double(milesButton.text!)
-       let theseMinutes = Int(timeButton.text!)
-        let thisTime = Time(sec: 0, min: theseMinutes!)
+        let theseMinutes = Int((timeButton.text?.components(separatedBy: ":").first)!)
+        let theseSeconds = Int((timeButton.text?.components(separatedBy: ":").last)!)
+        let thisTime = Time(sec: theseSeconds!, min: theseMinutes!)
        let theseNotes = noteSection.text
        
-        theAthlete?.getWorkout(selectedDate: datePicker.date).milesRan = theseMiles!
-        theAthlete?.getWorkout(selectedDate: datePicker.date).timeElapsed = thisTime
-        theAthlete?.getWorkout(selectedDate: datePicker.date).notes = theseNotes!
+        theAthlete?.getWorkout(selectedDate: dateInCalendar).milesRan = theseMiles!
+        theAthlete?.getWorkout(selectedDate: dateInCalendar).timeElapsed = thisTime
+        theAthlete?.getWorkout(selectedDate: dateInCalendar).notes = theseNotes!
         
         milesButton.isEnabled = false
         timeButton.isEnabled = false
         noteSection.isEditable = false
+        
+        let data = NSKeyedArchiver.archivedData(withRootObject: theTeam)
+        UserDefaults.standard.set(data, forKey: "theTeam")
     }
  
 
@@ -180,6 +185,8 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         }
         
         handleCelltextColor(view: cell, cellState: cellState)
+        
+        dateInCalendar = cellState.date
     }
     
     //Displays the background view when a date is selected
@@ -199,6 +206,8 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         timeButton.text = minutes?.toString()
         //sets the miles and time button to the current value stored for that athlete on that day
         noteSection.text = theAthlete?.getWorkout(selectedDate: selectedDate).notes
+        
+        dateInCalendar = cellState.date
     }
     
   
@@ -208,6 +217,8 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         validCell.selectedView.isHidden = true
         
         handleCelltextColor(view: cell, cellState: cellState)
+        
+        dateInCalendar = cellState.date
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {

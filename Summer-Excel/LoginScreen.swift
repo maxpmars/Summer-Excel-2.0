@@ -33,10 +33,10 @@ class LoginScreen: SwipableTabVC, UIPickerViewDelegate, UIPickerViewDataSource {
         return theTeam.count
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

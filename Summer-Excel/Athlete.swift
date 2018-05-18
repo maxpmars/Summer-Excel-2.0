@@ -18,7 +18,7 @@ class Athlete: NSObject, NSCoding  {
     var totalMiles: Double = 0.0
     var totalTime: Time = Time(sec: 0, min: 0)
     var attendance: Int = 0
-    var averagePace: Time = Time(min: 0)
+    var averagePace: Time = Time(sec: 0, min: 0)
     var id: String = ""
     
    
@@ -158,7 +158,7 @@ class Athlete: NSObject, NSCoding  {
     func getWorkout(selectedDate: Date) -> Workout {
         
         //creates a temporary workout object
-        let tempTime: Time = Time(min: 0)
+        let tempTime: Time = Time(sec: 0, min: 0)
         var temp: Workout = Workout(miles: 0.0, timeE: tempTime, theDate: selectedDate, words: "No Workout Logged", attend: false, thisId: "")
 
         let count = theAthlete!.workouts.count
