@@ -39,7 +39,7 @@ class PersonalDataView: SwipableTabVC {
         
     }
     
-    /*
+    
     @IBAction func editWorkout(_ sender: Any) {
         
         milesButton.isEnabled = true
@@ -49,19 +49,20 @@ class PersonalDataView: SwipableTabVC {
         }
         noteSection.isEditable = true
     }
-    */
+ 
 
     /*
     @IBAction func doneEditing(_ sender: Any) {
         //casts the buttons to usable variables
        let theseMiles = Double(milesButton.text!)
-       let theseMinutes = Int(timeButton.text!)
-        let thisTime = Time(sec: 0, min: theseMinutes!)
+        let minutes = Int(timeButton.text!.components(separatedBy: ":").first!)
+        let seconds = Int(timeButton.text!.components(separatedBy: ":").last!)
+        let thisTime = Time(sec:seconds! , min: minutes!)
        let theseNotes = noteSection.text
        
+        theAthlete?.getWorkout(selectedDate: CellState.date).notes = theseNotes!
         theAthlete?.getWorkout(selectedDate: datePicker.date).milesRan = theseMiles!
         theAthlete?.getWorkout(selectedDate: datePicker.date).timeElapsed = thisTime
-        theAthlete?.getWorkout(selectedDate: datePicker.date).notes = theseNotes!
         
         milesButton.isEnabled = false
         timeButton.isEnabled = false
