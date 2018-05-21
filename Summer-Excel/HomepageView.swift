@@ -93,15 +93,45 @@ class HomepageView: SwipableTabVC {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //keyboard displays when dateInput is selected
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        /*keyboard displays when dateInput is selected
        datePicker.datePickerMode = UIDatePickerMode.date
         dateInput.inputView = datePicker
  
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         dateInput.text = dateFormatter.string(from: self.datePicker.date)
+ */
+        createDatePicker()
+    }
+    
+    func createDatePicker()
+    {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        let dateString = formatter.string(from: datePicker.date)
+        dateInput.text = "\(dateString)"
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([done], animated: true)
+        dateInput.inputAccessoryView = toolbar
+        dateInput.inputView = datePicker
+        datePicker.datePickerMode = .date
+        
+        
+    }
+    @objc func donePressed()
+    {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        let dateString = formatter.string(from: datePicker.date)
+        dateInput.text = "\(dateString)"
+        self.view.endEditing(true)
     }
     
 
