@@ -56,9 +56,19 @@ class PersonalDataView: SwipableTabVC {
     @IBAction func doneEditing(_ sender: Any) {
         //casts the buttons to usable variables
        let theseMiles = Double(milesButton.text!)
-        let theseMinutes = Int((timeButton.text?.components(separatedBy: ":").first)!)
-        let theseSeconds = Int((timeButton.text?.components(separatedBy: ":").last)!)
-        let thisTime = Time(sec: theseSeconds!, min: theseMinutes!)
+        var theseMinutes: Int = 0
+        var theseSeconds: Int = 0
+        if (timeButton.text?.contains(":"))!
+        {
+            theseMinutes = Int((timeButton.text?.components(separatedBy: ":").first)!)!
+            theseSeconds = Int((timeButton.text?.components(separatedBy: ":").last)!)!
+        }
+        else
+        {
+            theseMinutes = Int((timeButton.text)!)!
+            theseSeconds = 0
+        }
+        let thisTime = Time(sec: theseSeconds, min: theseMinutes)
        let theseNotes = noteSection.text
        
         theAthlete?.getWorkout(selectedDate: dateInCalendar).milesRan = theseMiles!
@@ -75,8 +85,9 @@ class PersonalDataView: SwipableTabVC {
  
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        calendarView.reloadData()
         
         milesButton.isEnabled = false
         timeButton.isEnabled = false
@@ -89,6 +100,8 @@ class PersonalDataView: SwipableTabVC {
         //Calendar
         setUpCalendarView()
     }
+    
+    
     
     //Stuff for calendar
     let formatter = DateFormatter()
