@@ -9,7 +9,7 @@
 import UIKit
 
 class Workout: NSObject, NSCoding {
-
+    
     
     
     var milesRan: Double
@@ -28,11 +28,11 @@ class Workout: NSObject, NSCoding {
     //An optional string of characters the user enters when logging a run.
     
     var didAttend: Bool
+    var id: String = ""
     
-
     
     
-    init(miles: Double, timeE: Time, theDate: Date, words: String, attend: Bool )
+    init(miles: Double, timeE: Time, theDate: Date, words: String, attend: Bool, thisId: String )
     {
         timeElapsed = timeE
         date = theDate
@@ -48,7 +48,7 @@ class Workout: NSObject, NSCoding {
         milesRan = miles
         didAttend = attend
         
-        
+        id = thisId
     }
     
     required convenience init?(coder decoder: NSCoder)
@@ -59,7 +59,9 @@ class Workout: NSObject, NSCoding {
         decoder.decodeObject(forKey: "avgMilePace")
         let word = decoder.decodeObject(forKey: "notes") as? String
         let Attend = decoder.decodeBool(forKey: "didAttend")
-        self.init(miles: miles, timeE: timePassed!, theDate: day!, words: word!, attend: Attend)
+        let key = decoder.decodeObject(forKey: "thisId") as? String
+        
+        self.init(miles: miles, timeE: timePassed!, theDate: day!, words: word!, attend: Attend, thisId: key!)
     }
     
     func encode(with aCoder: NSCoder)
@@ -70,18 +72,8 @@ class Workout: NSObject, NSCoding {
         aCoder.encode(self.avgMilePace, forKey: "avgMilePace")
         aCoder.encode(self.notes, forKey: "notes")
         aCoder.encode(self.didAttend, forKey: "didAttend")
+        aCoder.encode(self.id, forKey: "thisId")
     }
-
-    
-    
     
     
 }
-
-
-        
-
-    
-    
-
-

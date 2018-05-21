@@ -96,9 +96,8 @@ class TeamDataView: SwipableTabVC, UITableViewDataSource, UITableViewDelegate, M
 
     
     @IBAction func exportCsvFile(_ sender: Any) {
-        var csvText: [String] = [",First Name,Last Name,Grade,Total Miles,Average Pace,Total Time,ExcelAttendence\n"]
+        var csvText = ",First Name,Last Name,Grade,Total Miles,Average Pace,Total Time,ExcelAttendence\n"
         let fileName = "Runners.csv"
-        //let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
 
         if theTeam.count > 0
         {
@@ -115,57 +114,17 @@ class TeamDataView: SwipableTabVC, UITableViewDataSource, UITableViewDelegate, M
             let newLine = "\(first),\(last),\(grade),\(miles),\(pace),\(time),\(excelAtt)\n"
             csvText.append(newLine)
         }
-            let inputString = csvText.joined(separator: ",")
-            let data = inputString.data(using: String.Encoding.utf8, allowLossyConversion: false)
-            if let content = data{
-                print("NSData: \(content)")
+            let path = NSURL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent(fileName)
+            do {
+                try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
             }
-            
-            //Generating email controller
-            func createEmailViewController() -> MFMailComposeViewController
-            {
-                let emailController = MFMailComposeViewController()
-                emailController.mailComposeDelegate = self
-                emailController.setSubject("Runner Data:")
-                emailController.setMessageBody("CSV file of Runner's total miles, average pace, total time, and grade level", isHTML: false)
-                emailController.setToRecipients(["shannon.braun@district196.org"])
-                
-                //Add csv file to the controller
-                emailController.addAttachmentData(data!, mimeType: "text/csv", fileName: "Runner.csv")
-                
-                return emailController
-                
+            catch {
+                print("Failed to create file")
+                print("\(error)")
             }
-            
-           /* func showSendMailErrorAlert()
-            {
-                let sendMailErrorAlert = UIAlertController(title: "Could not send Email", message: "Your device could not send email. Please check your email configureation and try again", preferredStyle: UIAlertControllerStyle.alert)
-                let OKAction = UIAlertAction(title: "OK", style: .default) {action in}
-                
-                sendMailErrorAlert.addAction(OKAction)
-                sendMailErrorAlert.present(sendMailErrorAlert, animated: true, completion: nil)
-            }*/
-
-            //The following code will allow the user to enter the subject, body text, and the email recipient to send the already attached CSV file
-            let emailViewController = createEmailViewController()
-            if MFMailComposeViewController.canSendMail()
-            {
-                self.present(emailViewController, animated: true, completion: nil)
-            }
-            /*else
-            {
-                showSendMailErrorAlert()
-            }**/
-
-            
-            
-                    }
-        
-
-    }
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
-    {
-        controller.dismiss(animated: true, completion: nil)
+            let activityView = UIActivityViewController(activityItems: [path!], applicationActivities:[])
+            present(activityView, animated: true, completion: nil)
+        }
     }
 }
 

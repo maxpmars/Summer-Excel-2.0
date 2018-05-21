@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class AddTeamatePopUp: LoginScreen, UITextFieldDelegate {
 
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.firstTextField.delegate = self
@@ -99,8 +101,10 @@ class AddTeamatePopUp: LoginScreen, UITextFieldDelegate {
             gradeSelected = 12
         }
         
-        let newAthlete = Athlete(name: athleteName, grade: gradeSelected)
-
+        let key = teamRef.childByAutoId().key
+        
+        let newAthlete = Athlete(name: athleteName, grade: gradeSelected, newId: key)
+        
         theTeam.append(newAthlete)
         
         if theTeam.count >= 2
@@ -111,6 +115,10 @@ class AddTeamatePopUp: LoginScreen, UITextFieldDelegate {
         let data = NSKeyedArchiver.archivedData(withRootObject: theTeam)
         UserDefaults.standard.set(data, forKey: "theTeam")
         
+        teamRef.child(key).child("key").setValue(key)
+        teamRef.child(key).child("name").setValue(athleteName)
+        teamRef.child(key).child("grade").setValue(gradeSelected)
+        teamRef.child(key).child("workouts")
     }
     
     func enabled() {

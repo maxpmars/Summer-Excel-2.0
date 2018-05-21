@@ -61,9 +61,10 @@ class HomepageView: SwipableTabVC {
             theseNotes = "No notes entered"
         }
         
+        let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
         
         //creates the workout for this log
-        let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: Date(), words: theseNotes!, attend: attended)
+        let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: Date(), words: theseNotes!, attend: attended, thisId: key)
         
         //attaches the workout to the athlete that is logged in
         theAthlete?.addWorkout(new: thisWorkout)
