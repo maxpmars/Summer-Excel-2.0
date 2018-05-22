@@ -182,16 +182,17 @@ class Athlete: NSObject, NSCoding  {
         return temp
     }
     
-    func editWorkout(date: Date, miles: Double, time: Time, notes: String)
+    func deleteWorkout(workout: Workout)
     {
-        let changedWorkout = theAthlete?.getWorkout(selectedDate: date)
-        let attend = changedWorkout?.didAttend
-        let workoutKey = changedWorkout?.id
-        let index = workouts.index(of: changedWorkout!)
+        totalMiles = totalMiles - workout.milesRan
+        totalTime.deleteTime(time2: workout.timeElapsed)
+        if workout.didAttend
+        {
+            attendance -= 1
+        }
+        teamRef.child(id).child("workouts").child(workout.id).removeValue()
+        let index = workouts.index(of: (theAthlete?.getWorkout(selectedDate: workout.date))!)
         workouts.remove(at: index!)
-        let newWorkout = Workout(miles: miles, timeE: time, theDate: date, words: notes, attend: attend!, thisId: workoutKey!)
-        theAthlete?.addWorkout(new: newWorkout)
-        
     }
 
     

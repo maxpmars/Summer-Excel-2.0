@@ -232,7 +232,6 @@
 				6F0653131FD9AF8D009C8587 /* Frameworks */,
 				6F0653141FD9AF8D009C8587 /* Resources */,
 				13A99A0D8CD9F66FA72C2C6E /* [CP] Embed Pods Frameworks */,
-				41EBEAEE4FB8C9CE84A2CECB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,8 +250,6 @@
 				6F0653261FD9AF8D009C8587 /* Sources */,
 				6F0653271FD9AF8D009C8587 /* Frameworks */,
 				6F0653281FD9AF8D009C8587 /* Resources */,
-				6760DB67994C3C97DE58DADE /* [CP] Embed Pods Frameworks */,
-				2A33D851384DF00DF7C86B53 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,8 +269,6 @@
 				6F0653311FD9AF8D009C8587 /* Sources */,
 				6F0653321FD9AF8D009C8587 /* Frameworks */,
 				6F0653331FD9AF8D009C8587 /* Resources */,
-				A9FE3E72AEE63A36D14BEAF6 /* [CP] Embed Pods Frameworks */,
-				AD19665DE59785B706DFA40E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -388,36 +383,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2A33D851384DF00DF7C86B53 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		41EBEAEE4FB8C9CE84A2CECB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		61A06897324E0FF37FCA2302 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,21 +401,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6760DB67994C3C97DE58DADE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A59436118AE60D18E4BF6328 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -467,36 +417,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A9FE3E72AEE63A36D14BEAF6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD19665DE59785B706DFA40E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E471514C7C56DDD3B3001749 /* [CP] Check Pods Manifest.lock */ = {
