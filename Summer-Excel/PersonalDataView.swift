@@ -59,20 +59,39 @@ class PersonalDataView: SwipableTabVC {
     @IBAction func doneEditing(_ sender: Any) {
         //casts the buttons to usable variables
         let theseMiles = Double(milesButton.text!)
-        let theseMinutes = Int(timeButton.text!)
-        let thisTime = Time(sec: 0, min: theseMinutes!)
+        var theseMinutes: Int = 0
+        var theseSeconds: Int = 0
+        if (timeButton.text?.contains(":"))!
+        {
+            theseMinutes = Int((timeButton.text?.components(separatedBy: ":").first)!)!
+            theseSeconds = Int((timeButton.text?.components(separatedBy: ":").last)!)!
+        }
+        else
+        {
+            theseMinutes = Int((timeButton.text)!)!
+            theseSeconds = 0
+        }
+        let thisTime = Time(sec: theseSeconds, min: theseMinutes)
         let theseNotes = noteSection.text
-        
-        let editingWorkout = theAthlete?.getWorkout(selectedDate: datePicker.date)
        
-        editingWorkout?.milesRan = theseMiles!
-        editingWorkout?.timeElapsed = thisTime
-        editingWorkout?.notes = theseNotes!
+        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+        theAthlete?.getWorkout(selectedDate: dateInCalendar).milesRan = theseMiles!
+        theAthlete?.getWorkout(selectedDate: dateInCalendar).timeElapsed = thisTime
+        theAthlete?.getWorkout(selectedDate: dateInCalendar).notes = theseNotes!
+        } else {
+            let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
+            let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: false, thisId: key)
+            theAthlete?.addWorkout(new: thisWorkout)
+        }
         
-        teamRef.child((theAthlete?.id)!).child("workouts").child((editingWorkout?.id)!).child("miles").setValue(theseMiles)
-        teamRef.child((theAthlete?.id)!).child("workouts").child((editingWorkout?.id)!).child("notes").setValue(theseNotes)
-        teamRef.child((theAthlete?.id)!).child("workouts").child((editingWorkout?.id)!).child("time").child("minutes").setValue(thisTime.minutes)
-        teamRef.child((theAthlete?.id)!).child("workouts").child((editingWorkout?.id)!).child("time").child("seconds").setValue(thisTime.seconds)
+        //Deletes old workout then adds new one
+        let changedWorkout = theAthlete?.getWorkout(selectedDate: dateInCalendar)
+        let attend = changedWorkout?.didAttend
+        theAthlete?.deleteWorkout(workout: changedWorkout!)
+        let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
+        let newWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: attend!, thisId: key)
+        theAthlete?.addWorkout(new: newWorkout)
+            
         
         milesButton.isEnabled = false
         timeButton.isEnabled = false
