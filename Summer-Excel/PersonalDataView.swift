@@ -22,18 +22,22 @@ class PersonalDataView: SwipableTabVC {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var editWorkoutButton: UIButton!
+    var dateInCalendar: Date!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        calendarView.reloadData()
+    }
     
     @IBAction func changeDate(_ sender: AnyObject) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         //everytime the date is changed in the datePicker, the label changes with it.
-        let miles = theAthlete?.getWorkout(selectedDate: datePicker.date).milesRan
+        let miles = theAthlete?.getWorkout(selectedDate: dateInCalendar).milesRan
         let milesStr = "\(miles ?? 0)"
         milesButton.text = milesStr
-        let minutes = theAthlete?.getWorkout(selectedDate: datePicker.date).timeElapsed
+        let minutes = theAthlete?.getWorkout(selectedDate: dateInCalendar).timeElapsed
         timeButton.text = minutes?.toString()
-        noteSection.text = theAthlete?.getWorkout(selectedDate: datePicker.date).notes
+        noteSection.text = theAthlete?.getWorkout(selectedDate: dateInCalendar).notes
         //sets the miles, time and notes section to the current value stored for that athlete on that day
     
         
@@ -73,12 +77,16 @@ class PersonalDataView: SwipableTabVC {
         milesButton.isEnabled = false
         timeButton.isEnabled = false
         noteSection.isEditable = false
+        
+        let data = NSKeyedArchiver.archivedData(withRootObject: theTeam)
+        UserDefaults.standard.set(data, forKey: "theTeam")
     }
- 
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        calendarView.reloadData()
         
         milesButton.isEnabled = false
         timeButton.isEnabled = false
@@ -91,6 +99,8 @@ class PersonalDataView: SwipableTabVC {
         //Calendar
         setUpCalendarView()
     }
+    
+    
     
     //Stuff for calendar
     let formatter = DateFormatter()
@@ -109,6 +119,7 @@ class PersonalDataView: SwipableTabVC {
             
             self.formatter.dateFormat = "MMMM"
             self.monthLabel.text = self.formatter.string(from: date)
+            
             
         }
         
@@ -187,6 +198,8 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         }
         
         handleCelltextColor(view: cell, cellState: cellState)
+        
+        dateInCalendar = cellState.date
     }
     
     //Displays the background view when a date is selected
@@ -206,6 +219,8 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         timeButton.text = minutes?.toString()
         //sets the miles and time button to the current value stored for that athlete on that day
         noteSection.text = theAthlete?.getWorkout(selectedDate: selectedDate).notes
+        
+        dateInCalendar = cellState.date
     }
     
   
@@ -215,6 +230,8 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         validCell.selectedView.isHidden = true
         
         handleCelltextColor(view: cell, cellState: cellState)
+        
+        dateInCalendar = cellState.date
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {

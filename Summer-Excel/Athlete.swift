@@ -179,7 +179,48 @@ class Athlete: NSObject, NSCoding  {
         return temp
     }
     
+    func deleteWorkout(workout: Workout)
+    {
+        totalMiles = totalMiles - workout.milesRan
+        totalTime.deleteTime(time2: workout.timeElapsed)
+        if workout.didAttend
+        {
+            attendance -= 1
+        }
+        teamRef.child(id).child("workouts").child(workout.id).removeValue()
+        let index = workouts.index(of: (theAthlete?.getWorkout(selectedDate: workout.date))!)
+        workouts.remove(at: index!)
+    }
 
+    
+    func hasWorkout(selectedDate: Date) -> Bool {
+        var torf = false
+        
+        let count = theAthlete!.workouts.count
+        for i in stride(from: 0, to: count, by: 1){
+            //creates strings of the dates to be compared
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy"
+            
+            let workoutSTR = dateFormatter.string(from: (theAthlete?.workouts[i].date)! )
+            let selectedDateSTR = dateFormatter.string(from: selectedDate)
+            
+            //if there is a workout in the workout array that has the same date as selected date, torf is set to true
+            if (workoutSTR == selectedDateSTR){
+                torf = true
+            }
+            
+        }
+        return torf
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
 

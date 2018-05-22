@@ -64,7 +64,8 @@ class HomepageView: SwipableTabVC {
         let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
         
         //creates the workout for this log
-        let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: Date(), words: theseNotes!, attend: attended, thisId: key)
+        let date = datePicker.date
+        let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: date, words: theseNotes!, attend: attended, thisId: key)
         
         //attaches the workout to the athlete that is logged in
         theAthlete?.addWorkout(new: thisWorkout)
@@ -93,17 +94,39 @@ class HomepageView: SwipableTabVC {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //keyboard displays when dateInput is selected
-       /* datePicker.datePickerMode = UIDatePickerMode.date
-        dateInput.inputView = datePicker
- 
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        dateInput.text = dateFormatter.string(from: self.datePicker.date)
-*/
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        createDatePicker()
     }
     
+    func createDatePicker()
+    {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        let dateString = formatter.string(from: datePicker.date)
+        dateInput.text = "\(dateString)"
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([done], animated: true)
+        dateInput.inputAccessoryView = toolbar
+        dateInput.inputView = datePicker
+        datePicker.datePickerMode = .date
+        
+        
+    }
+    @objc func donePressed()
+    {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        let dateString = formatter.string(from: datePicker.date)
+        dateInput.text = "\(dateString)"
+        self.view.endEditing(true)
+    }
+    
+
 
 }
