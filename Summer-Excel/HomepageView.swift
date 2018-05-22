@@ -93,9 +93,9 @@ class HomepageView: SwipableTabVC {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //keyboard displays when dateInput is selected
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        /*keyboard displays when dateInput is selected
        datePicker.datePickerMode = UIDatePickerMode.date
         dateInput.inputView = datePicker
  

@@ -19,7 +19,6 @@ class EditTeammatePopUp: HomepageView, UITextFieldDelegate {
     @IBOutlet weak var gradeTwelve: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
         firstNameTextField.isEnabled = true
         lastNameTextField.isEnabled = true
         gradeNine.isEnabled = true
