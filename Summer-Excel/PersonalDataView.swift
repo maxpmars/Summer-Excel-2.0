@@ -74,16 +74,7 @@ class PersonalDataView: SwipableTabVC {
         let thisTime = Time(sec: theseSeconds, min: theseMinutes)
         let theseNotes = noteSection.text
        
-        //Deletes old workout then adds new one
-        let changedWorkout = theAthlete?.getWorkout(selectedDate: dateInCalendar)
-        let attend = changedWorkout?.didAttend
-        teamRef.child((theAthlete?.id)!).child((changedWorkout?.id)!).removeValue()
-        let workoutArray = theAthlete?.workouts
-        let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
-        let index = workoutArray?.index(of: changedWorkout!)
-        theAthlete?.workouts.remove(at: index!)
-        let newWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: attend!, thisId: key)
-        theAthlete?.addWorkout(new: newWorkout)
+
         
         milesButton.isEnabled = false
         timeButton.isEnabled = false
