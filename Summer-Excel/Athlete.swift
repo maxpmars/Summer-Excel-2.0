@@ -182,6 +182,17 @@ class Athlete: NSObject, NSCoding  {
         return temp
     }
     
+    func editWorkout(date: Date, miles: Double, time: Time, notes: String)
+    {
+        let changedWorkout = theAthlete?.getWorkout(selectedDate: date)
+        let attend = changedWorkout?.didAttend
+        let workoutKey = changedWorkout?.id
+        let index = workouts.index(of: changedWorkout!)
+        workouts.remove(at: index!)
+        let newWorkout = Workout(miles: miles, timeE: time, theDate: date, words: notes, attend: attend!, thisId: workoutKey!)
+        theAthlete?.addWorkout(new: newWorkout)
+        
+    }
 
     
 }

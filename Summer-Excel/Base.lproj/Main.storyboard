@@ -124,7 +124,7 @@
                                             <constraint firstAttribute="width" constant="97" id="0Uy-Yx-aLi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miles:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTs-dI-r8S">
                                         <rect key="frame" x="0.0" y="8" width="76.5" height="36"/>
@@ -148,7 +148,7 @@
                                         <rect key="frame" x="268.5" y="11" width="97.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -513,7 +513,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJ9-sO-bS4">
-                                <rect key="frame" x="0.0" y="91" width="375" height="577"/>
+                                <rect key="frame" x="0.0" y="91" width="375" height="528"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uqi-0l-zlT">
                                         <rect key="frame" x="8" y="8" width="171" height="30"/>
@@ -546,13 +546,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="20C-6Q-Fmm">
-                                        <rect key="frame" x="27" y="529" width="51" height="31"/>
+                                        <rect key="frame" x="27" y="480" width="51" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="49" id="M3y-5X-fuZ"/>
                                         </constraints>
                                     </switch>
                                     <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZo-da-vha">
-                                        <rect key="frame" x="177.5" y="494" width="164.5" height="75"/>
+                                        <rect key="frame" x="177.5" y="445" width="164.5" height="75"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="Pvh-v4-SMW"/>
@@ -587,13 +587,13 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <action selector="minutesEdited:" destination="DmF-hA-eXZ" eventType="editingChanged" id="fYB-Ii-xqW"/>
                                         </connections>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X4G-Ze-INk">
-                                        <rect key="frame" x="114" y="262" width="242" height="224"/>
+                                        <rect key="frame" x="114" y="262" width="242" height="175"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -613,7 +613,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <action selector="milesEdited:" destination="DmF-hA-eXZ" eventType="editingChanged" id="WWG-Vp-2UF"/>
                                         </connections>
@@ -643,14 +643,14 @@
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <action selector="secondsEdited:" destination="DmF-hA-eXZ" eventType="editingChanged" id="EpY-Ih-4Xe"/>
                                             <action selector="secondsEdited:" destination="DmF-hA-eXZ" eventType="editingDidEnd" id="Gni-2h-QwS"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excel?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiG-Mb-3jF">
-                                        <rect key="frame" x="14.5" y="485" width="84" height="36"/>
+                                        <rect key="frame" x="14.5" y="436" width="84" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1119,6 +1119,7 @@
         <image name="Team.png" width="60" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dJQ-8q-ZGv"/>
+        <segue reference="X4Z-HC-Abc"/>
+        <segue reference="JuG-nM-2ms"/>
     </inferredMetricsTieBreakers>
 </document>

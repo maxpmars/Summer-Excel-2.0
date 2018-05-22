@@ -24,6 +24,9 @@ class PersonalDataView: SwipableTabVC {
     @IBOutlet weak var editWorkoutButton: UIButton!
     var dateInCalendar: Date!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        calendarView.reloadData()
+    }
     
     @IBAction func changeDate(_ sender: AnyObject) {
         let dateFormatter = DateFormatter()
@@ -55,7 +58,7 @@ class PersonalDataView: SwipableTabVC {
     
     @IBAction func doneEditing(_ sender: Any) {
         //casts the buttons to usable variables
-       let theseMiles = Double(milesButton.text!)
+        let theseMiles = Double(milesButton.text!)
         var theseMinutes: Int = 0
         var theseSeconds: Int = 0
         if (timeButton.text?.contains(":"))!
@@ -69,11 +72,18 @@ class PersonalDataView: SwipableTabVC {
             theseSeconds = 0
         }
         let thisTime = Time(sec: theseSeconds, min: theseMinutes)
-       let theseNotes = noteSection.text
+        let theseNotes = noteSection.text
        
-        theAthlete?.getWorkout(selectedDate: dateInCalendar).milesRan = theseMiles!
-        theAthlete?.getWorkout(selectedDate: dateInCalendar).timeElapsed = thisTime
-        theAthlete?.getWorkout(selectedDate: dateInCalendar).notes = theseNotes!
+        //Deletes old workout then adds new one
+        let changedWorkout = theAthlete?.getWorkout(selectedDate: dateInCalendar)
+        let attend = changedWorkout?.didAttend
+        teamRef.child((theAthlete?.id)!).child((changedWorkout?.id)!).removeValue()
+        let workoutArray = theAthlete?.workouts
+        let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
+        let index = workoutArray?.index(of: changedWorkout!)
+        theAthlete?.workouts.remove(at: index!)
+        let newWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: attend!, thisId: key)
+        theAthlete?.addWorkout(new: newWorkout)
         
         milesButton.isEnabled = false
         timeButton.isEnabled = false
