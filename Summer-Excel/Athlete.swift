@@ -92,14 +92,10 @@ class Athlete: NSObject, NSCoding  {
         format.timeStyle = .none
         format.locale = Locale(identifier: "en_US")
         
-        teamRef.child(id).child("workouts").child(new.id).child("miles").setValue(new.milesRan)
         let stringDate = format.string(from: new.date)
-        teamRef.child(id).child("workouts").child(new.id).child("date").setValue(stringDate)
-        teamRef.child(id).child("workouts").child(new.id).child("notes").setValue(new.notes)
-        teamRef.child(id).child("workouts").child(new.id).child("attendance").setValue(new.didAttend)
-        teamRef.child(id).child("workouts").child(new.id).child("time").child("minutes").setValue(new.timeElapsed.minutes)
-        teamRef.child(id).child("workouts").child(new.id).child("time").child("seconds").setValue(new.timeElapsed.seconds)
         
+        teamRef.child(id).child("workouts").child(new.id).setValue(["miles": new.milesRan, "date": stringDate, "notes": new.notes, "attendance": new.didAttend])
+        teamRef.child(id).child("workouts").child(new.id).child("time").setValue(["minutes": new.timeElapsed.minutes, "seconds": new.timeElapsed.seconds])
     }
     
     

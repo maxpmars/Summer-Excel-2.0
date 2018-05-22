@@ -74,7 +74,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             //workout is added code
-            if snapshot.childSnapshot(forPath: "key").exists() && snapshot.childSnapshot(forPath: "workouts").exists() {
                 let athleteKey = snapshot.childSnapshot(forPath: "key").value as! String
                 let workouts = snapshot.childSnapshot(forPath: "workouts")
                 
@@ -86,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 for thisWorkout in workouts.children {
                     let eachWorkout = thisWorkout as! DataSnapshot
-                    if eachWorkout.hasChild("attendance") && eachWorkout.hasChild("date") && eachWorkout.hasChild("miles") && eachWorkout.hasChild("notes") && eachWorkout.hasChild("time") && eachWorkout.childSnapshot(forPath: "time").hasChild("seconds") {
+                    if eachWorkout.hasChild("time") {
                         let attendance = eachWorkout.childSnapshot(forPath: "attendance").value as! Bool
                         let dateString = eachWorkout.childSnapshot(forPath: "date").value as! String
                         let date = format.date(from: dateString)
@@ -116,7 +115,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         }
                     }
                 }
-            }
         }
         
         return true

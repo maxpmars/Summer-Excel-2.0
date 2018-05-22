@@ -115,9 +115,7 @@ class AddTeamatePopUp: LoginScreen, UITextFieldDelegate {
         let data = NSKeyedArchiver.archivedData(withRootObject: theTeam)
         UserDefaults.standard.set(data, forKey: "theTeam")
         
-        teamRef.child(key).child("key").setValue(key)
-        teamRef.child(key).child("name").setValue(athleteName)
-        teamRef.child(key).child("grade").setValue(gradeSelected)
+        teamRef.child(key).setValue(["key": key, "name": athleteName, "grade": gradeSelected])
         teamRef.child(key).child("workouts")
     }
     
