@@ -83,7 +83,7 @@ class PersonalDataView: SwipableTabVC {
         let data = NSKeyedArchiver.archivedData(withRootObject: theTeam)
         UserDefaults.standard.set(data, forKey: "theTeam")
     }
- 
+
 
 
     override func viewWillAppear(_ animated: Bool) {
@@ -121,6 +121,7 @@ class PersonalDataView: SwipableTabVC {
             
             self.formatter.dateFormat = "MMMM"
             self.monthLabel.text = self.formatter.string(from: date)
+            
             
         }
         
