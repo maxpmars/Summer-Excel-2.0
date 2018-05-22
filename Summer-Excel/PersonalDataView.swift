@@ -52,18 +52,25 @@ class PersonalDataView: SwipableTabVC {
     }
  
 
-    /*
+    
     @IBAction func doneEditing(_ sender: Any) {
         //casts the buttons to usable variables
        let theseMiles = Double(milesButton.text!)
-        let minutes = Int(timeButton.text!.components(separatedBy: ":").first!)
-        let seconds = Int(timeButton.text!.components(separatedBy: ":").last!)
-        let thisTime = Time(sec:seconds! , min: minutes!)
+        let theseMinutes = Int((timeButton.text?.components(separatedBy: ":").first)!)
+        let theseSeconds = Int((timeButton.text?.components(separatedBy: ":").last)!)
+        let thisTime = Time(sec: theseSeconds!, min: theseMinutes!)
        let theseNotes = noteSection.text
        
-        theAthlete?.getWorkout(selectedDate: CellState.date).notes = theseNotes!
-        theAthlete?.getWorkout(selectedDate: datePicker.date).milesRan = theseMiles!
-        theAthlete?.getWorkout(selectedDate: datePicker.date).timeElapsed = thisTime
+        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+        theAthlete?.getWorkout(selectedDate: dateInCalendar).milesRan = theseMiles!
+        theAthlete?.getWorkout(selectedDate: dateInCalendar).timeElapsed = thisTime
+        theAthlete?.getWorkout(selectedDate: dateInCalendar).notes = theseNotes!
+        } else {
+            let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
+            let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: false, thisId: key)
+            theAthlete?.addWorkout(new: thisWorkout)
+        }
+            
         
         milesButton.isEnabled = false
         timeButton.isEnabled = false
@@ -72,7 +79,7 @@ class PersonalDataView: SwipableTabVC {
         let data = NSKeyedArchiver.archivedData(withRootObject: theTeam)
         UserDefaults.standard.set(data, forKey: "theTeam")
     }
-    */
+
 
 
     override func viewDidLoad() {
