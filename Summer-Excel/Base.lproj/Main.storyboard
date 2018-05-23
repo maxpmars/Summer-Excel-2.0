@@ -910,21 +910,16 @@
             </objects>
             <point key="canvasLocation" x="1087" y="-992"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar Table View Controller-->
         <scene sceneID="afb-1j-c1A">
             <objects>
-                <tabBarController id="wnB-0W-0pk" sceneMemberID="viewController">
+                <tabBarController id="wnB-0W-0pk" customClass="tabBarTableViewController" customModule="Summer_Excel" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="IcS-H9-B3c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="4Q5-JY-ebO" kind="relationship" relationship="viewControllers" id="AYi-pG-8ku"/>
                         <segue destination="DmF-hA-eXZ" kind="relationship" relationship="viewControllers" id="X4Z-HC-Abc"/>

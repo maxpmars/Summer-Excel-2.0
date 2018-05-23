@@ -22,13 +22,7 @@ class HomepageView: SwipableTabVC {
     @IBOutlet weak var secondInput: UITextField!
     @IBInspectable var defaultIndex: Int = 0
     @IBOutlet weak var excelTitleButton: UILabel!
-    
-
     var workoutArr: [Workout] = []
-    
-
-
-    
     
     @IBAction func milesEdited(_ sender: Any) {
         enabled()
