@@ -21,6 +21,7 @@ class HomepageView: SwipableTabVC {
     @IBOutlet weak var workoutPicker: UIPickerView!
     @IBOutlet weak var secondInput: UITextField!
     @IBInspectable var defaultIndex: Int = 0
+    @IBOutlet weak var excelTitleButton: UILabel!
     
 
     var workoutArr: [Workout] = []
@@ -97,6 +98,7 @@ class HomepageView: SwipableTabVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         createDatePicker()
+        excelTitleButton.text = theAthlete?.thisName
     }
     
     func createDatePicker()
