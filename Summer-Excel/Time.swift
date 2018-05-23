@@ -79,18 +79,6 @@ class Time: NSObject, NSCoding {
         return min
     }
     
-    func toMinString() -> String {
-        let min: String
-        min = "\(minutes)"
-        return min
-    }
-    
-    func toSecString() -> String {
-        let sec: String
-        sec = "\(seconds)"
-        return sec
-    }
-    
     //Divides the time object by a double using floating point arithmetic
     func divideTime(number: Double) -> Time
     {

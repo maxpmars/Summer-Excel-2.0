@@ -22,6 +22,7 @@ class PersonalDataView: SwipableTabVC {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var editWorkoutButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
     var dateInCalendar: Date!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,6 +53,7 @@ class PersonalDataView: SwipableTabVC {
             noteSection.text = ""
         }
         noteSection.isEditable = true
+        doneButton.isHidden = false
     }
  
 
@@ -92,6 +94,7 @@ class PersonalDataView: SwipableTabVC {
         milesButton.isEnabled = false
         timeButton.isEnabled = false
         noteSection.isEditable = false
+        doneButton.isHidden = true
         
         let data = NSKeyedArchiver.archivedData(withRootObject: theTeam)
         UserDefaults.standard.set(data, forKey: "theTeam")
@@ -113,6 +116,9 @@ class PersonalDataView: SwipableTabVC {
         
         //Calendar
         setUpCalendarView()
+        
+        //done button is hidden
+        doneButton.isHidden = true
     }
     
     

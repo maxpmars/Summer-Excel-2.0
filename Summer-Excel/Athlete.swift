@@ -100,59 +100,6 @@ class Athlete: NSObject, NSCoding  {
         teamRef.child(id).child("workouts").child(new.id).child("time").child("seconds").setValue(new.timeElapsed.seconds)
         
     }
-    
-    
-    func weeklyTotals(day: Date) -> (Double, Time, Int, Time) {
-        
-        //finds the weekday of the Date object and the date of the previous sunday and next saturday
-        let weekday = Calendar.current.component(.weekday, from: day) - 1
-        let sunday = Date(timeInterval: TimeInterval(86400 * (-(weekday + 1))), since: day)
-        let saturday = Date(timeInterval: TimeInterval(86400 * (6-weekday)), since: day)
-        
-        //Calculates the total weekly miles, time, attendance, and pace
-        var sumMiles = 0.0
-        let sumTime = Time(sec: 0, min: 0)
-        var sumAttendance = 0
-        let sumPace = Time(sec: 0, min: 0)
-        for each in workouts {
-            if (each.date < saturday) && (each.date < sunday) {
-                sumMiles += each.milesRan
-                sumTime.addTime(time2: each.timeElapsed)
-                if each.didAttend {
-                    sumAttendance += 1
-                }
-                sumPace.addTime(time2: each.avgMilePace)
-            }
-        }
-        
-        //Return a tuple of all the weekly totals
-        return (sumMiles, sumTime, sumAttendance, sumPace)
-    }
-    
-    //get method that will return the workout object from theAthelte from the date from the paramter
-    func getWorkoutArray(selectedDate: Date) -> Array<Workout> {
-      
-        var arr: [Workout] = []
-        
-        
-        let count = theAthlete!.workouts.count
-        for i in stride(from: 0, to: count, by: 1)
-        {
-            //creates two strings that represents the dates from the parameter and a workout object so they can be compared in the if statement
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM/dd/yyyy"
-            let workoutSTR = dateFormatter.string(from: (theAthlete?.workouts[i].date)! )
-            let selectedDateSTR = dateFormatter.string(from: selectedDate)
-            if(workoutSTR == selectedDateSTR )
-            {
-                // sets a temp wokrout object to the workout that has the same date as the parameter
-                arr.append((theAthlete?.workouts[i])!)
-            }
-    
-        }
-        return arr
-    }
-    
 
     
     func getWorkout(selectedDate: Date) -> Workout {
