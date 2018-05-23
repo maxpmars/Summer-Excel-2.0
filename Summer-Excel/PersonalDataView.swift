@@ -63,6 +63,13 @@ class PersonalDataView: SwipableTabVC {
         let theseMiles = Double(milesButton.text!)
         var theseMinutes: Int = 0
         var theseSeconds: Int = 0
+        let test1 = Int(milesButton.text!)
+        let test2 = Int(timeButton.text!)
+        if test1 == nil || test2 == nil || test1 == 0 || test2 == 0
+        {
+            doneButton.isHidden = true
+            return
+        }
         if (timeButton.text?.contains(":"))!
         {
             theseMinutes = Int((timeButton.text?.components(separatedBy: ":").first)!)!
@@ -76,19 +83,22 @@ class PersonalDataView: SwipableTabVC {
         let thisTime = Time(sec: theseSeconds, min: theseMinutes)
         let theseNotes = noteSection.text
        
-        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!
+        {
             let changedWorkout = theAthlete?.getWorkout(selectedDate: dateInCalendar)
             let attend = changedWorkout?.didAttend
             theAthlete?.deleteWorkout(workout: changedWorkout!)
             let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
             let newWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: attend!, thisId: key)
             theAthlete?.addWorkout(new: newWorkout)
-        } else {
+        }
+        else
+        {
             let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
             let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: false, thisId: key)
             theAthlete?.addWorkout(new: thisWorkout)
         }
-    
+        
             
         
         milesButton.isEnabled = false
