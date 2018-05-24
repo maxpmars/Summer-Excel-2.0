@@ -59,17 +59,14 @@ class PersonalDataView: SwipableTabVC {
 
     
     @IBAction func doneEditing(_ sender: Any) {
+        print("ran done editing")
         //casts the buttons to usable variables
         let theseMiles = Double(milesButton.text!)
         var theseMinutes: Int = 0
         var theseSeconds: Int = 0
-        let test1 = Int(milesButton.text!)
-        let test2 = Int(timeButton.text!)
-        if test1 == nil || test2 == nil || test1 == 0 || test2 == 0
-        {
-            doneButton.isHidden = true
-            return
-        }
+        let miles1 = Int(milesButton.text!)
+        let time1 = Int(timeButton.text!)
+        
         if (timeButton.text?.contains(":"))!
         {
             theseMinutes = Int((timeButton.text?.components(separatedBy: ":").first)!)!
@@ -92,7 +89,7 @@ class PersonalDataView: SwipableTabVC {
             let newWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: attend!, thisId: key)
             theAthlete?.addWorkout(new: newWorkout)
         }
-        else
+        else if theseMiles != 0 && thisTime != Time(sec: 0, min: 0)
         {
             let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
             let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: false, thisId: key)
@@ -100,7 +97,7 @@ class PersonalDataView: SwipableTabVC {
         }
         
             
-        
+        print("ran until the end")
         milesButton.isEnabled = false
         timeButton.isEnabled = false
         noteSection.isEditable = false
