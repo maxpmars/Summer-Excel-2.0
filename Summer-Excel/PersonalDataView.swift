@@ -25,26 +25,9 @@ class PersonalDataView: SwipableTabVC {
     @IBOutlet weak var doneButton: UIButton!
     var dateInCalendar: Date!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        calendarView.reloadData()
-    }
+
     
-    @IBAction func changeDate(_ sender: AnyObject) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        //everytime the date is changed in the datePicker, the label changes with it.
-        let miles = theAthlete?.getWorkout(selectedDate: dateInCalendar).milesRan
-        let milesStr = "\(miles ?? 0)"
-        milesButton.text = milesStr
-        let minutes = theAthlete?.getWorkout(selectedDate: dateInCalendar).timeElapsed
-        timeButton.text = minutes?.toString()
-        noteSection.text = theAthlete?.getWorkout(selectedDate: dateInCalendar).notes
-        //sets the miles, time and notes section to the current value stored for that athlete on that day
-    
-        
-    }
-    
-    
+
     @IBAction func editWorkout(_ sender: Any) {
         
         milesButton.isEnabled = true
@@ -102,8 +85,8 @@ class PersonalDataView: SwipableTabVC {
 
 
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         calendarView.reloadData()
         
         milesButton.isEnabled = false
@@ -185,6 +168,7 @@ extension PersonalDataView: JTAppleCalendarViewDataSource {
                                                  numberOfRows: 6)
         return parameters
     }
+    
     
     //Satisfies the data source protocol, displays the cell??
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
