@@ -22,8 +22,12 @@ class PersonalDataView: SwipableTabVC {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var editWorkoutButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
     var dateInCalendar: Date!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        calendarView.reloadData()
+    }
     
     @IBAction func changeDate(_ sender: AnyObject) {
         let dateFormatter = DateFormatter()
@@ -49,32 +53,48 @@ class PersonalDataView: SwipableTabVC {
             noteSection.text = ""
         }
         noteSection.isEditable = true
+        doneButton.isHidden = false
     }
  
 
     
     @IBAction func doneEditing(_ sender: Any) {
         //casts the buttons to usable variables
-       let theseMiles = Double(milesButton.text!)
-        let theseMinutes = Int((timeButton.text?.components(separatedBy: ":").first)!)
-        let theseSeconds = Int((timeButton.text?.components(separatedBy: ":").last)!)
-        let thisTime = Time(sec: theseSeconds!, min: theseMinutes!)
-       let theseNotes = noteSection.text
+        let theseMiles = Double(milesButton.text!)
+        var theseMinutes: Int = 0
+        var theseSeconds: Int = 0
+        if (timeButton.text?.contains(":"))!
+        {
+            theseMinutes = Int((timeButton.text?.components(separatedBy: ":").first)!)!
+            theseSeconds = Int((timeButton.text?.components(separatedBy: ":").last)!)!
+        }
+        else
+        {
+            theseMinutes = Int((timeButton.text)!)!
+            theseSeconds = 0
+        }
+        let thisTime = Time(sec: theseSeconds, min: theseMinutes)
+        let theseNotes = noteSection.text
        
         if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
-        theAthlete?.getWorkout(selectedDate: dateInCalendar).milesRan = theseMiles!
-        theAthlete?.getWorkout(selectedDate: dateInCalendar).timeElapsed = thisTime
-        theAthlete?.getWorkout(selectedDate: dateInCalendar).notes = theseNotes!
+            let changedWorkout = theAthlete?.getWorkout(selectedDate: dateInCalendar)
+            let attend = changedWorkout?.didAttend
+            theAthlete?.deleteWorkout(workout: changedWorkout!)
+            let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
+            let newWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: attend!, thisId: key)
+            theAthlete?.addWorkout(new: newWorkout)
         } else {
             let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
             let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: false, thisId: key)
             theAthlete?.addWorkout(new: thisWorkout)
         }
+    
             
         
         milesButton.isEnabled = false
         timeButton.isEnabled = false
         noteSection.isEditable = false
+        doneButton.isHidden = true
         
         let data = NSKeyedArchiver.archivedData(withRootObject: theTeam)
         UserDefaults.standard.set(data, forKey: "theTeam")
@@ -82,8 +102,9 @@ class PersonalDataView: SwipableTabVC {
 
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        calendarView.reloadData()
         
         milesButton.isEnabled = false
         timeButton.isEnabled = false
@@ -95,7 +116,12 @@ class PersonalDataView: SwipableTabVC {
         
         //Calendar
         setUpCalendarView()
+        
+        //done button is hidden
+        doneButton.isHidden = true
     }
+    
+    
     
     //Stuff for calendar
     let formatter = DateFormatter()

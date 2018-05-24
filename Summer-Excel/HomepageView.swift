@@ -21,13 +21,8 @@ class HomepageView: SwipableTabVC {
     @IBOutlet weak var workoutPicker: UIPickerView!
     @IBOutlet weak var secondInput: UITextField!
     @IBInspectable var defaultIndex: Int = 0
-    
-
+    @IBOutlet weak var excelTitleButton: UILabel!
     var workoutArr: [Workout] = []
-    
-
-
-    
     
     @IBAction func milesEdited(_ sender: Any) {
         enabled()
@@ -64,7 +59,8 @@ class HomepageView: SwipableTabVC {
         let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
         
         //creates the workout for this log
-        let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: Date(), words: theseNotes!, attend: attended, thisId: key)
+        let date = datePicker.date
+        let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: date, words: theseNotes!, attend: attended, thisId: key)
         
         //attaches the workout to the athlete that is logged in
         theAthlete?.addWorkout(new: thisWorkout)
@@ -95,15 +91,8 @@ class HomepageView: SwipableTabVC {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        /*keyboard displays when dateInput is selected
-       datePicker.datePickerMode = UIDatePickerMode.date
-        dateInput.inputView = datePicker
- 
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        dateInput.text = dateFormatter.string(from: self.datePicker.date)
- */
         createDatePicker()
+        excelTitleButton.text = theAthlete?.thisName
     }
     
     func createDatePicker()
@@ -134,5 +123,6 @@ class HomepageView: SwipableTabVC {
         self.view.endEditing(true)
     }
     
+
 
 }

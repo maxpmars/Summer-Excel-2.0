@@ -75,5 +75,5 @@ class Workout: NSObject, NSCoding {
         aCoder.encode(self.id, forKey: "thisId")
     }
     
-    
+
 }

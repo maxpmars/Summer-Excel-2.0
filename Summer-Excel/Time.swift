@@ -52,6 +52,16 @@ class Time: NSObject, NSCoding {
         totalSeconds = (minutes * 60) + seconds
     }
     
+    func deleteTime(time2: Time)
+    {
+        let sec = time2.seconds
+        let min = time2.minutes
+        
+        seconds = seconds - sec
+        minutes = minutes - min
+        totalSeconds = (minutes * 60) + seconds
+    }
+    
     //This function will allow the instance variables of a time object be listed in a way for the user to view the time that the object is associated with
     //parameters = none
     //return = String of letters and numbers representing the time the time object holds
@@ -67,18 +77,6 @@ class Time: NSObject, NSCoding {
         min = "\(minutes):\(seconds)"
         }
         return min
-    }
-    
-    func toMinString() -> String {
-        let min: String
-        min = "\(minutes)"
-        return min
-    }
-    
-    func toSecString() -> String {
-        let sec: String
-        sec = "\(seconds)"
-        return sec
     }
     
     //Divides the time object by a double using floating point arithmetic

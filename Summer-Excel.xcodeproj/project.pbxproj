@@ -15,6 +15,7 @@
 		326D95176F8A5252CE95C6C4 /* Pods_Summer_ExcelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F4A2C606A4E9F04235996E /* Pods_Summer_ExcelUITests.framework */; };
 		57C0BFD71FDEF8EF001FD4A6 /* AddTeamatePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C0BFD61FDEF8EF001FD4A6 /* AddTeamatePopUp.swift */; };
 		606E57BD20A5FF4E00B3F46C /* EditTeammatePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606E57BC20A5FF4E00B3F46C /* EditTeammatePopUp.swift */; };
+		60CC6B7020B5B3CF001C13D6 /* tabBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CC6B6F20B5B3CF001C13D6 /* tabBarTableViewController.swift */; };
 		694A97A89A4A7C5EF3B7A9AB /* Pods_Summer_Excel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD673E522E1592417462886 /* Pods_Summer_Excel.framework */; };
 		6F06531A1FD9AF8D009C8587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0653191FD9AF8D009C8587 /* AppDelegate.swift */; };
 		6F06531F1FD9AF8D009C8587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F06531D1FD9AF8D009C8587 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		4F01A6A944ECD2AACD1F3FF8 /* Pods-Summer-ExcelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Summer-ExcelTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		57C0BFD61FDEF8EF001FD4A6 /* AddTeamatePopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeamatePopUp.swift; sourceTree = "<group>"; };
 		606E57BC20A5FF4E00B3F46C /* EditTeammatePopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTeammatePopUp.swift; sourceTree = "<group>"; };
+		60CC6B6F20B5B3CF001C13D6 /* tabBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarTableViewController.swift; sourceTree = "<group>"; };
 		6F0653161FD9AF8D009C8587 /* Summer-Excel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Summer-Excel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F0653191FD9AF8D009C8587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F06531E1FD9AF8D009C8587 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				2352201B2098CF2E00E3C1DE /* Time.swift */,
 				6F1989D41FEAD6A70012B088 /* PersistantAthleteArray.swift */,
 				6F5EAA5C2062C4F800970D5C /* SwipableTabVC.swift */,
+				60CC6B6F20B5B3CF001C13D6 /* tabBarTableViewController.swift */,
 			);
 			name = "Functionality Classes";
 			sourceTree = "<group>";
@@ -232,7 +235,7 @@
 				6F0653131FD9AF8D009C8587 /* Frameworks */,
 				6F0653141FD9AF8D009C8587 /* Resources */,
 				13A99A0D8CD9F66FA72C2C6E /* [CP] Embed Pods Frameworks */,
-				41EBEAEE4FB8C9CE84A2CECB /* [CP] Copy Pods Resources */,
+				14F74E9519D24229B5437029 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,8 +254,8 @@
 				6F0653261FD9AF8D009C8587 /* Sources */,
 				6F0653271FD9AF8D009C8587 /* Frameworks */,
 				6F0653281FD9AF8D009C8587 /* Resources */,
-				6760DB67994C3C97DE58DADE /* [CP] Embed Pods Frameworks */,
-				2A33D851384DF00DF7C86B53 /* [CP] Copy Pods Resources */,
+				F7BE12AF1C6B5694805DC57A /* [CP] Embed Pods Frameworks */,
+				BB9E54405B0B0201568CB2DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,8 +275,8 @@
 				6F0653311FD9AF8D009C8587 /* Sources */,
 				6F0653321FD9AF8D009C8587 /* Frameworks */,
 				6F0653331FD9AF8D009C8587 /* Resources */,
-				A9FE3E72AEE63A36D14BEAF6 /* [CP] Embed Pods Frameworks */,
-				AD19665DE59785B706DFA40E /* [CP] Copy Pods Resources */,
+				C5A85DB3146B85FE5A3CA02E /* [CP] Embed Pods Frameworks */,
+				2CD5094B55EEFE7AE4DC8551 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -388,22 +391,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2A33D851384DF00DF7C86B53 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		41EBEAEE4FB8C9CE84A2CECB /* [CP] Copy Pods Resources */ = {
+		14F74E9519D24229B5437029 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -416,6 +404,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-Excel/Pods-Summer-Excel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CD5094B55EEFE7AE4DC8551 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		61A06897324E0FF37FCA2302 /* [CP] Check Pods Manifest.lock */ = {
@@ -436,21 +439,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6760DB67994C3C97DE58DADE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A59436118AE60D18E4BF6328 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,7 +457,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A9FE3E72AEE63A36D14BEAF6 /* [CP] Embed Pods Frameworks */ = {
+		BB9E54405B0B0201568CB2DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5A85DB3146B85FE5A3CA02E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -482,21 +485,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD19665DE59785B706DFA40E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelUITests/Pods-Summer-ExcelUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E471514C7C56DDD3B3001749 /* [CP] Check Pods Manifest.lock */ = {
@@ -517,6 +505,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F7BE12AF1C6B5694805DC57A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Summer-ExcelTests/Pods-Summer-ExcelTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -530,6 +533,7 @@
 				6F1989D51FEAD6A70012B088 /* PersistantAthleteArray.swift in Sources */,
 				6F5EAA5D2062C4F800970D5C /* SwipableTabVC.swift in Sources */,
 				6F06531A1FD9AF8D009C8587 /* AppDelegate.swift in Sources */,
+				60CC6B7020B5B3CF001C13D6 /* tabBarTableViewController.swift in Sources */,
 				6F2852E4202235FD00077CA4 /* LoginScreen.swift in Sources */,
 				606E57BD20A5FF4E00B3F46C /* EditTeammatePopUp.swift in Sources */,
 				235220142097796600E3C1DE /* CollectionViewCell.swift in Sources */,

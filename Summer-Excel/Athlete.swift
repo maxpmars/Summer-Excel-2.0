@@ -20,6 +20,7 @@ class Athlete: NSObject, NSCoding  {
     var attendance: Int = 0
     var averagePace: Time = Time(sec: 0, min: 0)
     var id: String = ""
+
     
    
     
@@ -91,68 +92,11 @@ class Athlete: NSObject, NSCoding  {
         format.timeStyle = .none
         format.locale = Locale(identifier: "en_US")
         
-        teamRef.child(id).child("workouts").child(new.id).child("miles").setValue(new.milesRan)
         let stringDate = format.string(from: new.date)
-        teamRef.child(id).child("workouts").child(new.id).child("date").setValue(stringDate)
-        teamRef.child(id).child("workouts").child(new.id).child("notes").setValue(new.notes)
-        teamRef.child(id).child("workouts").child(new.id).child("attendance").setValue(new.didAttend)
-        teamRef.child(id).child("workouts").child(new.id).child("time").child("minutes").setValue(new.timeElapsed.minutes)
-        teamRef.child(id).child("workouts").child(new.id).child("time").child("seconds").setValue(new.timeElapsed.seconds)
         
+        teamRef.child(id).child("workouts").child(new.id).setValue(["miles": new.milesRan, "date": stringDate, "notes": new.notes, "attendance": new.didAttend])
+        teamRef.child(id).child("workouts").child(new.id).child("time").setValue(["minutes": new.timeElapsed.minutes, "seconds": new.timeElapsed.seconds])
     }
-    
-    
-    func weeklyTotals(day: Date) -> (Double, Time, Int, Time) {
-        
-        //finds the weekday of the Date object and the date of the previous sunday and next saturday
-        let weekday = Calendar.current.component(.weekday, from: day) - 1
-        let sunday = Date(timeInterval: TimeInterval(86400 * (-(weekday + 1))), since: day)
-        let saturday = Date(timeInterval: TimeInterval(86400 * (6-weekday)), since: day)
-        
-        //Calculates the total weekly miles, time, attendance, and pace
-        var sumMiles = 0.0
-        let sumTime = Time(sec: 0, min: 0)
-        var sumAttendance = 0
-        let sumPace = Time(sec: 0, min: 0)
-        for each in workouts {
-            if (each.date < saturday) && (each.date < sunday) {
-                sumMiles += each.milesRan
-                sumTime.addTime(time2: each.timeElapsed)
-                if each.didAttend {
-                    sumAttendance += 1
-                }
-                sumPace.addTime(time2: each.avgMilePace)
-            }
-        }
-        
-        //Return a tuple of all the weekly totals
-        return (sumMiles, sumTime, sumAttendance, sumPace)
-    }
-    
-    //get method that will return the workout object from theAthelte from the date from the paramter
-    func getWorkoutArray(selectedDate: Date) -> Array<Workout> {
-      
-        var arr: [Workout] = []
-        
-        
-        let count = theAthlete!.workouts.count
-        for i in stride(from: 0, to: count, by: 1)
-        {
-            //creates two strings that represents the dates from the parameter and a workout object so they can be compared in the if statement
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM/dd/yyyy"
-            let workoutSTR = dateFormatter.string(from: (theAthlete?.workouts[i].date)! )
-            let selectedDateSTR = dateFormatter.string(from: selectedDate)
-            if(workoutSTR == selectedDateSTR )
-            {
-                // sets a temp wokrout object to the workout that has the same date as the parameter
-                arr.append((theAthlete?.workouts[i])!)
-            }
-    
-        }
-        return arr
-    }
-    
 
     
     func getWorkout(selectedDate: Date) -> Workout {
@@ -182,6 +126,18 @@ class Athlete: NSObject, NSCoding  {
         return temp
     }
     
+    func deleteWorkout(workout: Workout)
+    {
+        totalMiles = totalMiles - workout.milesRan
+        totalTime.deleteTime(time2: workout.timeElapsed)
+        if workout.didAttend
+        {
+            attendance -= 1
+        }
+        teamRef.child(id).child("workouts").child(workout.id).removeValue()
+        let index = workouts.index(of: (theAthlete?.getWorkout(selectedDate: workout.date))!)
+        workouts.remove(at: index!)
+    }
 
     
     func hasWorkout(selectedDate: Date) -> Bool {
