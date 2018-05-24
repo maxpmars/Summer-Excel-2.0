@@ -59,10 +59,14 @@ class PersonalDataView: SwipableTabVC {
 
     
     @IBAction func doneEditing(_ sender: Any) {
+        print("ran done editing")
         //casts the buttons to usable variables
         let theseMiles = Double(milesButton.text!)
         var theseMinutes: Int = 0
         var theseSeconds: Int = 0
+        let miles1 = Int(milesButton.text!)
+        let time1 = Int(timeButton.text!)
+        
         if (timeButton.text?.contains(":"))!
         {
             theseMinutes = Int((timeButton.text?.components(separatedBy: ":").first)!)!
@@ -76,21 +80,24 @@ class PersonalDataView: SwipableTabVC {
         let thisTime = Time(sec: theseSeconds, min: theseMinutes)
         let theseNotes = noteSection.text
        
-        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!
+        {
             let changedWorkout = theAthlete?.getWorkout(selectedDate: dateInCalendar)
             let attend = changedWorkout?.didAttend
             theAthlete?.deleteWorkout(workout: changedWorkout!)
             let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
             let newWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: attend!, thisId: key)
             theAthlete?.addWorkout(new: newWorkout)
-        } else {
+        }
+        else if theseMiles != 0 && thisTime != Time(sec: 0, min: 0)
+        {
             let key = teamRef.child((theAthlete?.id)!).child("workouts").childByAutoId().key
             let thisWorkout = Workout(miles: theseMiles!, timeE: thisTime, theDate: dateInCalendar, words: theseNotes!, attend: false, thisId: key)
             theAthlete?.addWorkout(new: thisWorkout)
         }
-    
-            
         
+            
+        print("ran until the end")
         milesButton.isEnabled = false
         timeButton.isEnabled = false
         noteSection.isEditable = false
