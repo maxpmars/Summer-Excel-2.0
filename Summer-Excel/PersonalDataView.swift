@@ -64,8 +64,6 @@ class PersonalDataView: SwipableTabVC {
         let theseMiles = Double(milesButton.text!)
         var theseMinutes: Int = 0
         var theseSeconds: Int = 0
-        let miles1 = Int(milesButton.text!)
-        let time1 = Int(timeButton.text!)
         
         if (timeButton.text?.contains(":"))!
         {
