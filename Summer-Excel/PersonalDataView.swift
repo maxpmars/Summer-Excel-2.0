@@ -107,8 +107,8 @@ class PersonalDataView: SwipableTabVC {
 
 
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         calendarView.reloadData()
         
         milesButton.isEnabled = false
