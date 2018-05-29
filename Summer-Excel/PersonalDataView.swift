@@ -109,6 +109,11 @@ class PersonalDataView: SwipableTabVC {
         
         //done button is hidden
         doneButton.isHidden = true
+        
+        let screenSize = UIScreen.main.bounds
+        let width = screenSize.width
+        let cellWidth = width / 7
+        calendarView.cellSize = cellWidth
     }
     
     
