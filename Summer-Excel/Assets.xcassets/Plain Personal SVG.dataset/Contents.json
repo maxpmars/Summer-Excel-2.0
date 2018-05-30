@@ -1,0 +1,15 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "data" : [
+    {
+      "idiom" : "universal",
+      "filename" : "Plain Personal SVG.svg"
+    },
+    {
+      "idiom" : "iphone"
+    }
+  ]
+}

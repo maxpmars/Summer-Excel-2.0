@@ -308,14 +308,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2018-05-30 at 11.15.23 AM" translatesAutoresizingMaskIntoConstraints="NO" id="9ZX-XG-BoR">
+                                                    <rect key="frame" x="64" y="72" width="23" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="WaJ-jD-xak" userLabel="height = 49"/>
+                                                        <constraint firstAttribute="width" constant="23" id="zlF-Kw-UgU" userLabel="width = 52"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="9ZX-XG-BoR" firstAttribute="centerY" secondItem="ich-56-ZPK" secondAttribute="centerY" constant="26" id="0pZ-4D-66F"/>
                                             <constraint firstItem="ZtQ-53-I2D" firstAttribute="top" secondItem="ich-56-ZPK" secondAttribute="topMargin" id="EAN-CH-tDi"/>
                                             <constraint firstItem="FXD-cQ-zwp" firstAttribute="leading" secondItem="ich-56-ZPK" secondAttribute="leadingMargin" constant="34" id="FnJ-x8-4Xf"/>
                                             <constraint firstItem="ZtQ-53-I2D" firstAttribute="leading" secondItem="ich-56-ZPK" secondAttribute="leadingMargin" constant="1" id="HN1-eZ-N0r"/>
                                             <constraint firstItem="FXD-cQ-zwp" firstAttribute="centerY" secondItem="ich-56-ZPK" secondAttribute="centerY" id="McV-cU-d2u"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="FXD-cQ-zwp" secondAttribute="trailing" constant="34" id="VsT-Kf-Xyp"/>
+                                            <constraint firstItem="9ZX-XG-BoR" firstAttribute="centerX" secondItem="ich-56-ZPK" secondAttribute="centerX" constant="13.5" id="iOR-o1-8m8"/>
                                             <constraint firstItem="ZtQ-53-I2D" firstAttribute="top" secondItem="ich-56-ZPK" secondAttribute="topMargin" id="zVf-XI-tJW"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -1152,6 +1161,7 @@
         <image name="Log.png" width="60" height="40"/>
         <image name="Personal" width="60" height="40"/>
         <image name="Personal.png" width="60" height="40"/>
+        <image name="Screen Shot 2018-05-30 at 11.15.23 AM" width="382" height="374"/>
         <image name="Team" width="60" height="40"/>
         <image name="Team.png" width="60" height="40"/>
     </resources>
