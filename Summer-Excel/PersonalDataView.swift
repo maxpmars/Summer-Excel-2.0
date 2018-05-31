@@ -198,9 +198,12 @@ extension PersonalDataView: JTAppleCalendarViewDataSource {
         
         dateInCalendar = cellState.date
         
-        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
-            cell.runnerIcon.isHidden = false
-        }
+        /*
+         dateInCalendar = cellState.date
+         if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+         validCell.runnerIcon.isHidden = false
+         }
+         */
         
         return cell
     }
@@ -213,12 +216,21 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CollectionViewCell
         cell.dateLabel.text = cellState.text
         
+        
+        dateInCalendar = cellState.date
         //Makes sure collection view de-selects cells after reusing them for other months
         if cellState.isSelected {
             cell.selectedView.isHidden = false
+            if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+                cell.runnerIcon.isHidden = false
+            }
         } else {
             cell.selectedView.isHidden = true
+            if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+                cell.runnerIcon.isHidden = false
+            }
         }
+        
         
         handleCelltextColor(view: cell, cellState: cellState)
         
@@ -226,6 +238,7 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
             cell.runnerIcon.isHidden = false
         }
+        
     }
     
     //Displays the background view when a date is selected
@@ -235,9 +248,12 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         validCell.selectedView.isHidden = false
         
         dateInCalendar = cellState.date
-        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
-            validCell.runnerIcon.isHidden = false
-        }
+        /*
+         dateInCalendar = cellState.date
+         if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+         validCell.runnerIcon.isHidden = false
+         }
+         */
         
         handleCelltextColor(view: cell, cellState: cellState)
         
@@ -260,12 +276,12 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         validCell.selectedView.isHidden = true
         
         handleCelltextColor(view: cell, cellState: cellState)
-        
+        /*
         dateInCalendar = cellState.date
         if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
             validCell.runnerIcon.isHidden = false
         }
-
+        */
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
