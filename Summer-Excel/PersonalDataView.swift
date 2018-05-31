@@ -223,7 +223,6 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         handleCelltextColor(view: cell, cellState: cellState)
         
         dateInCalendar = cellState.date
-        
         if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
             cell.runnerIcon.isHidden = false
         }
@@ -234,6 +233,11 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         guard (cell as? CollectionViewCell) != nil else { return }
         let validCell = cell as! CollectionViewCell
         validCell.selectedView.isHidden = false
+        
+        dateInCalendar = cellState.date
+        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+            validCell.runnerIcon.isHidden = false
+        }
         
         handleCelltextColor(view: cell, cellState: cellState)
         
@@ -247,8 +251,6 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         //sets the miles and time button to the current value stored for that athlete on that day
         noteSection.text = theAthlete?.getWorkout(selectedDate: selectedDate).notes
         
-        dateInCalendar = cellState.date
-        
     }
     
   
@@ -260,6 +262,9 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         handleCelltextColor(view: cell, cellState: cellState)
         
         dateInCalendar = cellState.date
+        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+            validCell.runnerIcon.isHidden = false
+        }
 
     }
     
