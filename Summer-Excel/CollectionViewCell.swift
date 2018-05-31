@@ -12,5 +12,6 @@ import JTAppleCalendar
 class CollectionViewCell: JTAppleCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var selectedView: UIView!
+    @IBOutlet weak var runnerIcon: UIImageView!
     
 }

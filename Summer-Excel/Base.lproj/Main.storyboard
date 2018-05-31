@@ -334,6 +334,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dateLabel" destination="ZtQ-53-I2D" id="UN4-ps-wxh"/>
+                                            <outlet property="runnerIcon" destination="9ZX-XG-BoR" id="TXZ-qK-CCh"/>
                                             <outlet property="selectedBackgroundView" destination="FXD-cQ-zwp" id="bYz-Wr-FAI"/>
                                             <outlet property="selectedView" destination="FXD-cQ-zwp" id="MOx-ge-yeZ"/>
                                         </connections>

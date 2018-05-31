@@ -25,6 +25,7 @@ class PersonalDataView: SwipableTabVC {
     @IBOutlet weak var doneButton: UIButton!
     var dateInCalendar: Date!
     
+
     
 
     
@@ -114,6 +115,8 @@ class PersonalDataView: SwipableTabVC {
         let width = screenSize.width
         let cellWidth = width / 7
         calendarView.cellSize = cellWidth
+        
+        
     }
     
     
@@ -136,10 +139,7 @@ class PersonalDataView: SwipableTabVC {
             self.formatter.dateFormat = "MMMM"
             self.monthLabel.text = self.formatter.string(from: date)
             
-            
         }
-        
-        
     }
     
     //Changes the color of the text in the cells
@@ -196,6 +196,12 @@ extension PersonalDataView: JTAppleCalendarViewDataSource {
         
         handleCelltextColor(view: cell, cellState: cellState)
         
+        dateInCalendar = cellState.date
+        
+        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+            cell.runnerIcon.isHidden = false
+        }
+        
         return cell
     }
     
@@ -217,6 +223,10 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         handleCelltextColor(view: cell, cellState: cellState)
         
         dateInCalendar = cellState.date
+        
+        if(theAthlete?.hasWorkout(selectedDate: dateInCalendar))!{
+            cell.runnerIcon.isHidden = false
+        }
     }
     
     //Displays the background view when a date is selected
@@ -238,6 +248,7 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         noteSection.text = theAthlete?.getWorkout(selectedDate: selectedDate).notes
         
         dateInCalendar = cellState.date
+        
     }
     
   
@@ -249,6 +260,7 @@ extension PersonalDataView: JTAppleCalendarViewDelegate {
         handleCelltextColor(view: cell, cellState: cellState)
         
         dateInCalendar = cellState.date
+
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
